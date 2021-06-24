@@ -5,7 +5,7 @@ using System.Security.Claims;
 using System.Security.Cryptography;
 
 
-namespace MistkurtAPI.Classes
+namespace MistkurtAPI.Classes.Auth
 {
     public class JwtGenerator
     {
@@ -36,3 +36,4 @@ namespace MistkurtAPI.Classes
         }
     }
 }
+
