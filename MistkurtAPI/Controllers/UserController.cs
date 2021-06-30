@@ -7,6 +7,7 @@ using Microsoft.Extensions.Configuration;
 using System.ComponentModel.DataAnnotations;
 using MistkurtAPI.Classes.Auth;
 using Microsoft.Extensions.Logging;
+using MistkurtAPI.Classes.Databases;
 
 namespace MistkurtAPI.Controllers
 {
@@ -51,14 +52,28 @@ namespace MistkurtAPI.Controllers
             if(payload != null)
                 token = _jwtGenerator.CreateUserAuthToken(payload.Email);
 
+            if(token != null)
+            {
+                Redis.cli.Set($"auth:{payload.Email}", token);
+            }
+
             return Ok(new { AuthToken =  token});
         }
 
-        [Authorize]
-        [HttpGet]
-        public void TestAuth()
+        [AllowAnonymous]
+        [HttpPost("checkToken")]
+        public IActionResult CheckToken([FromBody] string user, [FromHeader] JsonWebToken token)
         {
-            return;
+            _logger.LogInformation("user", user);
+            _logger.LogDebug("token", token);
+
+            string savedToken = Redis.cli.Get($"auth:{user}");
+            if(savedToken == token.ToString())
+            {
+                return NotFound();
+            }
+
+            return Ok();
         }
     }
 }

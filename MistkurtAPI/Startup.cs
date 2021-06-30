@@ -7,6 +7,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 using MistkurtAPI.Classes.Auth;
+using MistkurtAPI.Classes.Common;
 
 namespace MistkurtAPI
 {
@@ -59,6 +60,8 @@ namespace MistkurtAPI
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "MistkurtAPI v1"));
             }
+
+            app.UseMiddleware<RequestLoggingMiddleware>();
 
             app.UseHttpsRedirection();
 
