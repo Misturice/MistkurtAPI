@@ -21,6 +21,13 @@ namespace MistkurtAPI.Controllers
             public string IdToken { get; set; }
         }
 
+        public class CheckTokenRequest
+        {
+            [Required]
+            [FromBody]
+            public string Email { get; set; }
+        }
+
         private readonly JwtGenerator _jwtGenerator;
         private readonly ILogger _logger;
 
@@ -62,18 +69,21 @@ namespace MistkurtAPI.Controllers
 
         [AllowAnonymous]
         [HttpPost("checkToken")]
-        public IActionResult CheckToken([FromBody] string user, [FromHeader] JsonWebToken token)
+        public IActionResult CheckToken([FromBody] CheckTokenRequest user)
         {
-            _logger.LogInformation("user", user);
-            _logger.LogDebug("token", token);
-
-            string savedToken = Redis.cli.Get($"auth:{user}");
-            if(savedToken == token.ToString())
+            Request.Headers.TryGetValue("Authorization", out var token);
+            
+            if(string.IsNullOrEmpty(token))
             {
                 return NotFound();
             }
 
-            return Ok();
+            token = token.ToString().Split(" ")[1];
+
+            string savedToken = Redis.cli.Get($"auth:{user.Email}");
+            _logger.LogInformation($"saved token: {savedToken}");
+
+            return Ok(new { Authorized = savedToken == token});
         }
     }
 }
