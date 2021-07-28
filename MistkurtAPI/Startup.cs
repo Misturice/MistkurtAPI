@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -24,6 +25,10 @@ namespace MistkurtAPI
         {
 
             services.AddControllers();
+
+            services.AddEntityFrameworkNpgsql().AddDbContext<MistKurtContext>(opt =>
+                opt.UseNpgsql(Configuration.GetConnectionString("DatabaseConnection")));
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "MistkurtAPI", Version = "v1" });
