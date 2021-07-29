@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MistkurtAPI;
 using MistkurtAPI.Models;
+using MistkurtAPI.Classes.Databases;
 
 namespace MistkurtAPI.Controllers
 {
@@ -28,24 +29,11 @@ namespace MistkurtAPI.Controllers
             return await _context.Users.ToListAsync();
         }
 
-        // GET: api/Admin/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<User>> GetUser(string id)
-        {
-            var user = await _context.Users.FindAsync(id);
-
-            if (user == null)
-            {
-                return NotFound();
-            }
-
-            return user;
-        }
 
         // PUT: api/Admin/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutUser(string id, User user)
+        public async Task<IActionResult> PutUser(Guid id, User user)
         {
             if (id != user.UserID)
             {
@@ -60,7 +48,7 @@ namespace MistkurtAPI.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!UserExists(id))
+                if (!Postgres.UserExistsByEmail(user.Email, _context))
                 {
                     return NotFound();
                 }
@@ -76,7 +64,7 @@ namespace MistkurtAPI.Controllers
         // POST: api/Admin
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<User>> PostUser(User user)
+        public async Task<ActionResult> PostUser(User user)
         {
             _context.Users.Add(user);
             try
@@ -85,7 +73,7 @@ namespace MistkurtAPI.Controllers
             }
             catch (DbUpdateException)
             {
-                if (UserExists(user.UserID))
+                if (Postgres.UserExistsByEmail(user.Email, _context))
                 {
                     return Conflict();
                 }
@@ -95,7 +83,7 @@ namespace MistkurtAPI.Controllers
                 }
             }
 
-            return CreatedAtAction("GetUser", new { id = user.UserID }, user);
+            return Ok(); //CreatedAtAction("GetUser", new { id = user.UserID }, user);
         }
 
         // DELETE: api/Admin/5
@@ -114,9 +102,6 @@ namespace MistkurtAPI.Controllers
             return NoContent();
         }
 
-        private bool UserExists(string id)
-        {
-            return _context.Users.Any(e => e.UserID == id);
-        }
+
     }
 }

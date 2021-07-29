@@ -15,6 +15,8 @@ namespace MistkurtAPI.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
+
+        private readonly MistKurtContext _context;
         public class AuthenticateRequest
         {
             [Required]
@@ -31,10 +33,11 @@ namespace MistkurtAPI.Controllers
         private readonly JwtGenerator _jwtGenerator;
         private readonly ILogger _logger;
 
-        public UserController(IConfiguration configuration, ILogger<UserController> logger)
+        public UserController(IConfiguration configuration, ILogger<UserController> logger, MistKurtContext context)
         {
             _jwtGenerator = new JwtGenerator(configuration.GetValue<String>("JwtPrivateSigningKey"));
             _logger = logger;
+            _context = context;
         }
 
     
@@ -59,9 +62,9 @@ namespace MistkurtAPI.Controllers
             if(payload != null)
                 token = _jwtGenerator.CreateUserAuthToken(payload.Email);
 
-            if(token != null)
+            if(token != null && Postgres.UserExistsByEmail(payload.Email, _context))
             {
-                Redis.cli.Set($"auth:{payload.Email}", token);
+                var user = _context.Users.Find(payload.Email);
             }
 
             return Ok(new { AuthToken =  token});

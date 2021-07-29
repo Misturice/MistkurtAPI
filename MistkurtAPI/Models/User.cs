@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MistkurtAPI.Models
@@ -14,8 +15,8 @@ namespace MistkurtAPI.Models
     public class User
     {
         [Key]
-        [Column("UserID")]
-        public string UserID { get; set; }
+        [Column("UserID"), DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public Guid UserID { get; set; }
         [Column("Email"), Required, Index(IsUnique = true)]
         public string Email { get; set; }
         [Column("Role"), Required]
