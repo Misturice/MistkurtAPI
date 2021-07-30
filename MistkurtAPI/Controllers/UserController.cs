@@ -8,6 +8,7 @@ using System.ComponentModel.DataAnnotations;
 using MistkurtAPI.Classes.Auth;
 using Microsoft.Extensions.Logging;
 using MistkurtAPI.Classes.Databases;
+using System.Threading.Tasks;
 
 namespace MistkurtAPI.Controllers
 {
@@ -44,7 +45,7 @@ namespace MistkurtAPI.Controllers
 
         [AllowAnonymous]
         [HttpPost("authenticate")]
-        public IActionResult Authenticate([FromBody] AuthenticateRequest data)
+        public async Task<IActionResult> AuthenticateAsync([FromBody] AuthenticateRequest data)
         {
             GoogleJsonWebSignature.ValidationSettings settings = new GoogleJsonWebSignature.ValidationSettings();
             settings.Audience = new List<string>() { "779499495532-sgb4ddi6eqodamcdlq83bt9i4keib3eo.apps.googleusercontent.com" }; // TODO Add to env variables
@@ -64,29 +65,30 @@ namespace MistkurtAPI.Controllers
 
             if(token != null && Postgres.UserExistsByEmail(payload.Email, _context))
             {
-                var user = _context.Users.Find(payload.Email);
+                Models.User user = await Postgres.FindUserByEmailAsync(payload.Email, _context);
+                user.Token = token;
+                await Postgres.UpdateUser(user, _context);
             }
+            else
+               return Conflict();
 
             return Ok(new { AuthToken =  token});
         }
 
+
         [AllowAnonymous]
         [HttpPost("checkToken")]
-        public IActionResult CheckToken([FromBody] CheckTokenRequest user)
+        public async Task<IActionResult> CheckToken([FromBody] CheckTokenRequest data)
         {
             Request.Headers.TryGetValue("Authorization", out var token);
             
-            if(string.IsNullOrEmpty(token))
-            {
-                return NotFound();
-            }
+            if(string.IsNullOrEmpty(token) || Postgres.UserExistsByEmail(data.Email, _context))
+              return NotFound();
 
             token = token.ToString().Split(" ")[1];
+            Models.User user = await Postgres.FindUserByEmailAsync(data.Email, _context);
 
-            string savedToken = Redis.cli.Get($"auth:{user.Email}");
-            _logger.LogInformation($"saved token: {savedToken}");
-
-            return Ok(new { Authorized = savedToken == token});
+            return Ok(new { Authorized = user.Token == token});
         }
     }
 }
