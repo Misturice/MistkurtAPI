@@ -15,18 +15,18 @@ namespace MistkurtAPI.Controllers
     [ApiController]
     public class AdminController : ControllerBase
     {
-        private readonly MistKurtContext _context;
+        private readonly Postgres _postgres;
 
-        public AdminController(MistKurtContext context )
+        public AdminController(MistKurtContext context)
         {
-            _context = context;
+            _postgres = new(context);
         }
 
         // GET: api/Admin
         [HttpGet]
         public async Task<ActionResult<IEnumerable<User>>> GetUsers()
         {
-            return await Postgres.ReturnAllUsers(_context);
+            return _postgres.ReturnAllUsers();
         }
 
 
@@ -35,10 +35,10 @@ namespace MistkurtAPI.Controllers
         [HttpPost]
         public async Task<ActionResult> PostUser(User user)
         {
-            if(Postgres.UserExistsByEmail(user.Email, _context))
+            if(_postgres.UserExistsByEmail(user.Email))
                 return Conflict();
 
-            await Postgres.AddNewUserAsync(user, _context);
+            await _postgres.AddNewUserAsync(user);
 
             return Ok();
         }
@@ -47,7 +47,7 @@ namespace MistkurtAPI.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteUser(Guid id)
         {
-            bool status = await Postgres.DeleteUser(id, _context);
+            bool status = await _postgres.DeleteUser(id);
 
             if (status)
                 return NoContent();

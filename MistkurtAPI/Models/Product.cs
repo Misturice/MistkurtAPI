@@ -17,6 +17,8 @@ namespace MistkurtAPI.Models
         public string Tag { get; set; }
         [Column("Type")]
         public string Type { get; set; }
+        [Column("Cost")]
+        public float Cost { get; set; }
 
         [Column("ExpensesID"), ForeignKey("ExpensesID"), Index("ExpensesID"), Required]
         public int ExpensesID { get; set; }

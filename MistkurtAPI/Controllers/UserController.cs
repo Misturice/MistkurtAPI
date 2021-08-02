@@ -17,7 +17,8 @@ namespace MistkurtAPI.Controllers
     public class UserController : ControllerBase
     {
 
-        private readonly MistKurtContext _context;
+        private readonly Postgres _postgres;
+
         public class AuthenticateRequest
         {
             [Required]
@@ -38,7 +39,7 @@ namespace MistkurtAPI.Controllers
         {
             _jwtGenerator = new JwtGenerator(configuration.GetValue<String>("JwtPrivateSigningKey"));
             _logger = logger;
-            _context = context;
+            _postgres = new(context);
         }
 
     
@@ -63,11 +64,11 @@ namespace MistkurtAPI.Controllers
             if(payload != null)
                 token = _jwtGenerator.CreateUserAuthToken(payload.Email);
 
-            if(token != null && Postgres.UserExistsByEmail(payload.Email, _context))
+            if(token != null && _postgres.UserExistsByEmail(payload.Email))
             {
-                Models.User user = await Postgres.FindUserByEmailAsync(payload.Email, _context);
+                Models.User user = await _postgres.FindUserByEmailAsync(payload.Email);
                 user.Token = token;
-                await Postgres.UpdateUser(user, _context);
+                await _postgres.UpdateUser(user);
             }
             else
                return Conflict();
@@ -82,11 +83,11 @@ namespace MistkurtAPI.Controllers
         {
             Request.Headers.TryGetValue("Authorization", out var token);
             
-            if(string.IsNullOrEmpty(token) || Postgres.UserExistsByEmail(data.Email, _context))
+            if(string.IsNullOrEmpty(token) || _postgres.UserExistsByEmail(data.Email))
               return NotFound();
 
             token = token.ToString().Split(" ")[1];
-            Models.User user = await Postgres.FindUserByEmailAsync(data.Email, _context);
+            Models.User user = await _postgres.FindUserByEmailAsync(data.Email);
 
             return Ok(new { Authorized = user.Token == token});
         }

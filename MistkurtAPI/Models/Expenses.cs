@@ -10,11 +10,11 @@ namespace MistkurtAPI.Models
         [Column("ExpensesID"), Key]
         public int ID { get; set; }
 
-        [Column("Date"), Index("DateIndex"), Index(IsUnique = true), Required]
-        public int Date { get; set; }
+        [Column("Date"), Index("DateIndex"), Required]
+        public long Date { get; set; }
 
         [Column("Total"), Required]
-        public int Total { get; set; }
+        public float Total { get; set; }
 
         [Column("UserID"), ForeignKey("UserID"), Required, Index("UserIDIndex")]
         public Guid UserID { get; set; }

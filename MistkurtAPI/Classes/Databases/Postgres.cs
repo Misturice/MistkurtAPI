@@ -1,78 +1,135 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Data.Entity;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MistkurtAPI.Models;
+
+
 namespace MistkurtAPI.Classes.Databases
 {
-    public static class Postgres
+    public class Postgres
     {
+        MistKurtContext _context;
+
+        public Postgres(MistKurtContext context)
+        {
+            _context = context;
+        }
 
         #region User Models
-        public static bool UserExistsByEmail(string email, MistKurtContext context)
+        public bool UserExistsByEmail(string email)
         {
-            return context.Users.Any(e => e.Email == email);
+            return _context.Users.Any(e => e.Email == email);
         }
 
-        public static async Task<User> FindUserByEmailAsync(string email, MistKurtContext context)
+        public async Task<User> FindUserByEmailAsync(string email)
         {
-            return await context.Users.FindAsync(email);
+            return await _context.Users.FindAsync(email);
         }
 
-        public static async Task<User> FindUserByIDAsync(Guid id, MistKurtContext context)
+        public async Task<User> FindUserByIDAsync(Guid id)
         {
-            return await context.Users.FindAsync(id);
+            return await _context.Users.FindAsync(id);
         }
 
-        public static async Task<ActionResult<IEnumerable<User>>> ReturnAllUsers(MistKurtContext context)
+        public  ActionResult<IEnumerable<User>> ReturnAllUsers()
         {
-            return await context.Users.ToListAsync();
+            return  _context.Users.ToList();
         }
 
-        public static async Task AddNewUserAsync(User user, MistKurtContext context)
+        public async Task AddNewUserAsync(User user)
         {
-            context.Users.Add(user);
-            await context.SaveChangesAsync();
+            _context.Users.Add(user);
+            await _context.SaveChangesAsync();
         }
 
-        public static async Task UpdateUser(User user,MistKurtContext context)
+        public async Task UpdateUser(User user)
         {
-            context.Update(user);
-            await context.SaveChangesAsync();
+            _context.Update(user);
+            await _context.SaveChangesAsync();
         }
 
-        public static async Task<bool> DeleteUser(Guid id, MistKurtContext context)
+        public async Task<bool> DeleteUser(Guid id)
         {
-            User user = await FindUserByIDAsync(id, context);
+            User user = await FindUserByIDAsync(id);
             if (user == null)
                 return false;
 
-            context.Users.Remove(user);
-            await context.SaveChangesAsync();
+            _context.Users.Remove(user);
+            await _context.SaveChangesAsync();
             return true;
         }
         #endregion
 
         #region ExpensesModel
         
-        public static async Task<ActionResult<Expenses>> GetUserExpenses(Guid id, MistKurtContext context)
+        public IEnumerable<Expenses> GetUserExpensesAsync(Guid id)
         {
-            return await context.Expenses.FindAsync(id);
+            return _context.Expenses.Where(elem => elem.UserID == id).ToList();
         }
 
-        public static async Task<ActionResult<IEnumerable<Expenses>>> GetUserExpensesByDateAsync(Guid id, int startDate, int endDate, MistKurtContext context)
+        public async Task<Expenses> GetExpenseAsync(int id)
         {
-            return await context.Expenses.Where(elem => elem.UserID == id && elem.Date >= startDate && elem.Date <= endDate).ToListAsync();
+            return await _context.Expenses.FindAsync(id);
+        }
+
+        public async Task<ActionResult<IEnumerable<Expenses>>> GetUserExpensesByDateAsync(Guid id, long startDate, long endDate)
+        {
+            return await _context.Expenses.Where(elem => elem.UserID == id && elem.Date >= startDate && elem.Date <= endDate).ToListAsync();
+        }
+
+
+        public Expenses GetUserExpenseForGivenDay(Guid id, long date)
+        {
+            IEnumerable<Expenses> exp = _context.Expenses.Where(elem => elem.UserID == id && elem.Date == date);
+            return exp.FirstOrDefault();
+        }
+
+        public void AddNewExpense(Expenses expense)
+        {
+            _context.Expenses.Add(expense);
+            _context.SaveChanges();
         }
 
         #endregion
 
         #region ProductsModel
-        public static async Task<IEnumerable<Product>> FindProductsByExpenseAsync(int id, MistKurtContext context)
+        public async Task<IEnumerable<Product>> FindProductsByExpenseAsync(int id)
         {
-            return await context.Products.Where(elem => elem.ExpensesID == id).ToListAsync();
+            return await _context.Products.Where(elem => elem.ExpensesID == id).ToListAsync();
+        }
+
+        public async Task<Product> FindProductByIDAsync(int id)
+        {
+            return await _context.Products.FindAsync(id);
+        }
+
+        public async Task<bool> DeleteProductByID(int id)
+        {
+            Product product = await FindProductByIDAsync(id);
+            if (product == null)
+                return false;
+
+            _context.Products.Remove(product);
+            await _context.SaveChangesAsync();
+            return true;
+        }
+
+        public void AddProduct(Product product)
+        {
+            _context.Products.Add(product);
+        }
+
+
+        #endregion
+
+        #region Common
+        public async Task SaveDatabase()
+        {
+            await _context.SaveChangesAsync();
         }
         #endregion
 

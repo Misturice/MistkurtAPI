@@ -10,26 +10,26 @@ namespace MistkurtAPI.Controllers
     [ApiController]
     public class ExpensesController : ControllerBase
     {
-        private readonly MistKurtContext _context;
+        private readonly Postgres _postgres;
 
         public ExpensesController(MistKurtContext context)
         {
-            _context = context;
+            _postgres = new(context);
         }
 
 
         // GET: api/Expenses/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Expenses>> GetExpenses(Guid id)
+        public IEnumerable<Expenses> GetExpenses(Guid id)
         {
-            return await Postgres.GetUserExpenses(id, _context);
+            return _postgres.GetUserExpensesAsync(id);
         }
 
         // GET: api/Expenses/5/2021-05-01
         [HttpGet("{id}/{startDate}/{endDate}")]
         public async Task<ActionResult<IEnumerable<Expenses>>> GetExpensesByDate(Guid id, int startDate, int endDate)
         {
-            return await Postgres.GetUserExpensesByDateAsync(id, startDate, endDate, _context);
+            return await _postgres.GetUserExpensesByDateAsync(id, startDate, endDate);
         }
     }
 }
