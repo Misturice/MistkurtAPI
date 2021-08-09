@@ -1,14 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace MistkurtAPI.Models
+namespace Entities
 {
     [Table("Expenses")]
     public class Expenses
     {
         [Column("ExpensesID"), Key]
-        public int ID { get; set; }
+        public Guid Id { get; set; }
 
         [Column("Date"), Index("DateIndex"), Required]
         public long Date { get; set; }
@@ -16,10 +17,12 @@ namespace MistkurtAPI.Models
         [Column("Total"), Required]
         public float Total { get; set; }
 
-        [Column("UserID"), ForeignKey("UserID"), Required, Index("UserIDIndex")]
+        [Column("UserID"), ForeignKey(nameof(UserID)), Required, Index("UserIDIndex")]
         public Guid UserID { get; set; }
         
-        public virtual User User { get; set; }
+        public User User { get; set; }
+
+        public ICollection<Product> Products { get; set; }
 
     }
 }

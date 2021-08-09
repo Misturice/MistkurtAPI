@@ -1,37 +1,57 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+using AutoMapper;
+using Contracts;
+using Entities;
+using Entities.DataTransferObjects;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using MistkurtAPI;
-using MistkurtAPI.Models;
-using MistkurtAPI.Classes.Databases;
+using Repository;
 
 namespace MistkurtAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/admin")]
     [ApiController]
     public class AdminController : ControllerBase
     {
-        private readonly Postgres _postgres;
+        private readonly IRepositoryWrapper _repository;
+        private readonly ILoggerManager _logger;
+        private readonly IMapper _mapper;
 
-        public AdminController(MistKurtContext context)
+        public AdminController(IRepositoryWrapper repository, ILoggerManager logger, IMapper mapper)
         {
-            _postgres = new(context);
+            _repository = repository;
+            _logger = logger;
+            _mapper = mapper;
         }
 
-        // GET: api/Admin
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<User>>> GetUsers()
+        // GET: api/admin/getUsers
+        [HttpGet("getUsers")]
+        public  ActionResult GeAllUsers()
         {
-            return _postgres.ReturnAllUsers();
+            IEnumerable<User> users = _repository.User.GetAllUsers();
+            IEnumerable<UserDto> usersResult = _mapper.Map<IEnumerable<UserDto>>(users);
+
+            return Ok(usersResult);
+        }
+
+        [HttpGet("getUser/{id}")]
+        public IActionResult GetUserById(Guid id)
+        {
+            User user = _repository.User.GetUserById(id);
+
+            if(user == null)
+            {
+                _logger.LogError($"Owner with id: {id} not found");
+                return NotFound();
+            }
+
+            UserDto userResult = _mapper.Map<UserDto>(user);
+            return Ok(userResult);
         }
 
 
         // POST: api/Admin
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult> PostUser(User user)
         {

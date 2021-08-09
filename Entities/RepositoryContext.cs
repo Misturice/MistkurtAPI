@@ -1,13 +1,15 @@
-﻿
-using Microsoft.EntityFrameworkCore;
-using MistkurtAPI.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace MistkurtAPI
+namespace Entities
 {
-    public class MistKurtContext : DbContext
+    public class RepositoryContext : DbContext
     {
-        public MistKurtContext(DbContextOptions < MistKurtContext > options): base(options) {}
-
+        public RepositoryContext(DbContextOptions<RepositoryContext> options) : base(options) { }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);

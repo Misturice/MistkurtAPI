@@ -1,14 +1,14 @@
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Options;
-using Microsoft.OpenApi.Models;
-using MistkurtAPI.Classes.Auth;
+
 using MistkurtAPI.Classes.Common;
+using MistkurtAPI.Extensions;
+using NLog;
+using System;
+using System.IO;
 
 namespace MistkurtAPI
 {
@@ -16,6 +16,7 @@ namespace MistkurtAPI
     {
         public Startup(IConfiguration configuration)
         {
+            LogManager.LoadConfiguration(String.Concat(Directory.GetCurrentDirectory(), "/nlog.config"));
             Configuration = configuration;
         }
 
@@ -23,36 +24,18 @@ namespace MistkurtAPI
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.ConfigureAuthentication();
+            services.ConfigureLoggerService();
+            services.ConfigureCors();
+            services.ConfigureJWT();
+            services.ConfigurePostgresContext(Configuration);
+            services.ConfigureSwagger();
+            services.ConfigureRepositoryWrapper();
 
-            services.AddControllers();
+            services.AddAutoMapper(typeof(Startup));
 
-            services.AddEntityFrameworkNpgsql().AddDbContext<MistKurtContext>(opt =>
-                opt.UseNpgsql(Configuration.GetConnectionString("DatabaseConnection")));
+            services.ConfigureControllers();
 
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "MistkurtAPI", Version = "v1" });
-            });
-            services.AddCors(options =>
-            {
-                options.AddPolicy("AllowAngularDevClient",
-                  builder =>
-                  {
-                      builder
-                      .WithOrigins("http://localhost:4200")
-                      .AllowAnyHeader()
-                      .AllowAnyMethod();
-                  });
-            });
-
-            services.AddAuthentication(options =>
-            {
-                options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
-                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            }).AddJwtBearer();
-
-            services.AddTransient<IConfigureOptions<JwtBearerOptions>, ConfigureJwtBearerOptions>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

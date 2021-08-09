@@ -7,8 +7,9 @@ using Microsoft.Extensions.Configuration;
 using System.ComponentModel.DataAnnotations;
 using MistkurtAPI.Classes.Auth;
 using Microsoft.Extensions.Logging;
-using MistkurtAPI.Classes.Databases;
 using System.Threading.Tasks;
+using Contracts;
+using Entities;
 
 namespace MistkurtAPI.Controllers
 {
@@ -17,7 +18,6 @@ namespace MistkurtAPI.Controllers
     public class UserController : ControllerBase
     {
 
-        private readonly Postgres _postgres;
 
         public class AuthenticateRequest
         {
@@ -32,21 +32,22 @@ namespace MistkurtAPI.Controllers
             public string Email { get; set; }
         }
 
+        private readonly IRepositoryWrapper _repository;
         private readonly JwtGenerator _jwtGenerator;
         private readonly ILogger _logger;
 
-        public UserController(IConfiguration configuration, ILogger<UserController> logger, MistKurtContext context)
+        public UserController(IRepositoryWrapper repository, IConfiguration configuration, ILogger logger)
         {
+            _repository = repository;
             _jwtGenerator = new JwtGenerator(configuration.GetValue<String>("JwtPrivateSigningKey"));
             _logger = logger;
-            _postgres = new(context);
         }
 
     
 
         [AllowAnonymous]
         [HttpPost("authenticate")]
-        public async Task<IActionResult> AuthenticateAsync([FromBody] AuthenticateRequest data)
+        public IActionResult AuthenticateAsync([FromBody] AuthenticateRequest data)
         {
             GoogleJsonWebSignature.ValidationSettings settings = new GoogleJsonWebSignature.ValidationSettings();
             settings.Audience = new List<string>() { "779499495532-sgb4ddi6eqodamcdlq83bt9i4keib3eo.apps.googleusercontent.com" }; // TODO Add to env variables
@@ -64,11 +65,12 @@ namespace MistkurtAPI.Controllers
             if(payload != null)
                 token = _jwtGenerator.CreateUserAuthToken(payload.Email);
 
-            if(token != null && _postgres.UserExistsByEmail(payload.Email))
+            if(token != null && _repository.User.Equals(payload.Email))
             {
-                Models.User user = await _postgres.FindUserByEmailAsync(payload.Email);
+                User user = _repository.User.GetUserByEmail(payload.Email);
                 user.Token = token;
-                await _postgres.UpdateUser(user);
+                _repository.User.Update(user);
+                _repository.Save();
             }
             else
                return Conflict();
@@ -79,15 +81,15 @@ namespace MistkurtAPI.Controllers
 
         [AllowAnonymous]
         [HttpPost("checkToken")]
-        public async Task<IActionResult> CheckToken([FromBody] CheckTokenRequest data)
+        public IActionResult CheckToken([FromBody] CheckTokenRequest data)
         {
             Request.Headers.TryGetValue("Authorization", out var token);
             
-            if(string.IsNullOrEmpty(token) || _postgres.UserExistsByEmail(data.Email))
+            if(string.IsNullOrEmpty(token) || _repository.User.Equals(data.Email))
               return NotFound();
 
             token = token.ToString().Split(" ")[1];
-            Models.User user = await _postgres.FindUserByEmailAsync(data.Email);
+            User user = _repository.User.GetUserByEmail(data.Email);
 
             return Ok(new { Authorized = user.Token == token});
         }
