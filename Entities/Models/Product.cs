@@ -22,10 +22,8 @@ namespace Entities
         [Column("Cost"), Required(ErrorMessage = "Cost is required")]
         public float Cost { get; set; }
 
-        [Column("ExpensesID"), ForeignKey(nameof(ExpensesID)), Index("ExpensesID"), Required]
-        public int ExpensesID { get; set; }
-
-        public Expenses Expenses { get; set; }
+        [Column("ExpensesID"), ForeignKey(nameof(ExpensesId)), Index("ExpensesID"), Required]
+        public Guid ExpensesId { get; set; }
 
     }
 }

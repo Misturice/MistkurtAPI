@@ -10,6 +10,8 @@ using Microsoft.Extensions.Logging;
 using System.Threading.Tasks;
 using Contracts;
 using Entities;
+using AutoMapper;
+using Entities.DataTransferObjects;
 
 namespace MistkurtAPI.Controllers
 {
@@ -34,13 +36,15 @@ namespace MistkurtAPI.Controllers
 
         private readonly IRepositoryWrapper _repository;
         private readonly JwtGenerator _jwtGenerator;
-        private readonly ILogger _logger;
+        private readonly ILoggerManager _logger;
+        private readonly IMapper _mapper;
 
-        public UserController(IRepositoryWrapper repository, IConfiguration configuration, ILogger logger)
+        public UserController(IRepositoryWrapper repository, IConfiguration configuration, ILoggerManager logger, IMapper mapper)
         {
             _repository = repository;
             _jwtGenerator = new JwtGenerator(configuration.GetValue<String>("JwtPrivateSigningKey"));
             _logger = logger;
+            _mapper = mapper;
         }
 
     
@@ -65,17 +69,16 @@ namespace MistkurtAPI.Controllers
             if(payload != null)
                 token = _jwtGenerator.CreateUserAuthToken(payload.Email);
 
-            if(token != null && _repository.User.Equals(payload.Email))
-            {
-                User user = _repository.User.GetUserByEmail(payload.Email);
-                user.Token = token;
-                _repository.User.Update(user);
-                _repository.Save();
-            }
-            else
-               return Conflict();
+            if (!_repository.User.EmailExists(payload.Email) || token == null)
+                return Conflict();
+   
+            User user = _repository.User.GetUserByEmail(payload.Email);
+            user.Token = token;
+            _repository.User.UpdateUser(user);
+            _repository.Save();
+            UserDto userResult = _mapper.Map<UserDto>(user);
 
-            return Ok(new { AuthToken =  token});
+            return Ok(userResult);
         }
 
 
@@ -85,13 +88,29 @@ namespace MistkurtAPI.Controllers
         {
             Request.Headers.TryGetValue("Authorization", out var token);
             
-            if(string.IsNullOrEmpty(token) || _repository.User.Equals(data.Email))
+            if(string.IsNullOrEmpty(token) || !_repository.User.EmailExists(data.Email))
               return NotFound();
 
-            token = token.ToString().Split(" ")[1];
+            token = token.ToString().Split(" ")[1].ToString();
             User user = _repository.User.GetUserByEmail(data.Email);
+            if (!user.Token.Equals(token))
+                return Conflict();
 
-            return Ok(new { Authorized = user.Token == token});
+            UserDto userResult = _mapper.Map<UserDto>(user);
+            return Ok(userResult);
+        }
+
+
+
+        [AllowAnonymous]
+        [HttpGet("{id}/account")]
+        public IActionResult GetUserWithDetails(Guid id)
+        {
+            User user = _repository.User.GetUserWithDetails(id);
+            if (user == null)
+                return NotFound();
+            UserDto userResult = _mapper.Map<UserDto>(user);
+            return Ok(userResult);
         }
     }
 }

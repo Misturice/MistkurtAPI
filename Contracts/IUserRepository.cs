@@ -11,11 +11,13 @@ namespace Contracts
     {
         IEnumerable<User> GetAllUsers();
         User GetUserById(Guid id);
-
         User GetUserByEmail(string email);
+        User GetUserWithDetails(Guid id);
 
         bool EmailExists(string email);
 
-        void Update(User user);
+        void UpdateUser(User user);
+        void CreateUser(User user);
+        void DeleteUser(User user);
     }
 }

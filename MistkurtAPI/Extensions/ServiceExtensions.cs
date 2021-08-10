@@ -72,5 +72,10 @@ namespace MistkurtAPI.Extensions
         {
             services.AddSingleton<ILoggerManager, LoggerManager>();
         }
+
+        public static void ConfigureActionFilters(this IServiceCollection services)
+        {
+            services.AddScoped<UserValidationFilterAttribute>();
+        }
     }
 }

@@ -9,5 +9,10 @@ namespace Contracts
 {
     public interface IProductRepository
     {
+        public Product GetProductById(Guid id);
+        public void CreateProduct(Product product);
+        public void UpdateProduct(Product product);
+        public void DeleteProduct(Product product);
+
     }
 }

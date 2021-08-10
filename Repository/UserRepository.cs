@@ -1,10 +1,9 @@
 ﻿using Contracts;
 using Entities;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Repository
 {
@@ -17,7 +16,9 @@ namespace Repository
 
         public IEnumerable<User> GetAllUsers()
         {
-            return FindAll().OrderBy(user => user.Email).ToList();
+            return FindAll().
+                OrderBy(user => user.Name)
+                .ToList();
         }
 
         public User GetUserById(Guid id)
@@ -25,9 +26,18 @@ namespace Repository
             return FindByKey(id);
         }
 
+        public User GetUserWithDetails(Guid id)
+        {
+            return FindByCondition(user => user.Id.Equals(id))
+                .Include(e => e.Expenses)
+                .ThenInclude(e => e.Products)
+                .FirstOrDefault();
+        }
+
         public User GetUserByEmail(string email)
         {
-            return FindByCondition(user => user.Email.Equals(email)).First();
+            return FindByCondition(user => user.Email.Equals(email))
+                .FirstOrDefault();
         }
 
         public bool EmailExists(string email)
@@ -35,9 +45,19 @@ namespace Repository
             return Exists(user => user.Email.Equals(email));
         }
 
-        public void Update(User user)
+        public void UpdateUser(User user)
         {
           Update(user);
+        }
+
+        public void CreateUser(User user)
+        {
+            Create(user);
+        }
+
+        public void DeleteUser(User user)
+        {
+            Delete(user);
         }
 
         

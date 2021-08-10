@@ -17,8 +17,8 @@ namespace Entities
         [Column("Total"), Required]
         public float Total { get; set; }
 
-        [Column("UserID"), ForeignKey(nameof(UserID)), Required, Index("UserIDIndex")]
-        public Guid UserID { get; set; }
+        [Column("UserID"), ForeignKey(nameof(UserId)), Required, Index("UserIDIndex")]
+        public Guid UserId { get; set; }
         
         public User User { get; set; }
 

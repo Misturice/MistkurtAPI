@@ -1,39 +1,40 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using AutoMapper;
+﻿using AutoMapper;
 using Contracts;
 using Entities;
 using Entities.DataTransferObjects;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using MistkurtAPI;
+using MistkurtAPI.Classes.Common;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace MistkurtAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProductsController : ControllerBase
+    public class FinanceController : Controller
     {
+
         private readonly IRepositoryWrapper _repository;
         private readonly ILoggerManager _logger;
         private readonly IMapper _mapper;
-        public ProductsController(IRepositoryWrapper repository, ILoggerManager logger, IMapper mapper)
+
+
+        public FinanceController(IRepositoryWrapper repository, ILoggerManager logger, IMapper mapper)
         {
             _repository = repository;
             _logger = logger;
             _mapper = mapper;
         }
 
-        // POST: /api/Products/5/000000000
-        [HttpPost("{userId}/{date}")]
+        // POST: /api/Finance/AddProduct/5/000000000
+        [HttpPost("AddProduct/{userId}/{date}")]
         public IActionResult AddProducts([FromBody] IEnumerable<ProductForCreationDto> products, Guid userId, int date)
         {
             Expenses expense = null;
             bool createdNewExpense = false;
-            if(!_repository.Expenses.ExpenseExists(userId, date))
+            if (!_repository.Expenses.ExpenseExists(userId, date))
             {
                 expense = new();
                 expense.Date = date;
@@ -55,7 +56,7 @@ namespace MistkurtAPI.Controllers
                 Product productEntity = _mapper.Map<Product>(product);
                 productEntity.ExpensesId = expense.Id;
                 expense.Products.Add(productEntity);
-               // _repository.Product.CreateProduct(productEntity);
+                // _repository.Product.CreateProduct(productEntity);
             }
 
             expense.Total += newTotalCost;
@@ -70,8 +71,8 @@ namespace MistkurtAPI.Controllers
             return NoContent();
         }
 
-        // PUT: /api/Products/123
-        [HttpPut("{id}")]
+        // PUT: /api/Finance/UpdateProduct/123
+        [HttpPut("UpdateProduct/{id}")]
         public IActionResult UpdateProduct([FromBody] ProductForCreationDto product, Guid id)
         {
             Product productEntity = _repository.Product.GetProductById(id);
@@ -85,18 +86,45 @@ namespace MistkurtAPI.Controllers
             return NoContent();
         }
 
-        //DELETE: /api/Products/123
-        [HttpDelete("{id}")]
+        //DELETE: /api/Finance/DeleteProduct/123
+        [HttpDelete("DeleteProduct/{id}")]
         public IActionResult DeleteProduct(Guid id)
         {
             Product productEntity = _repository.Product.GetProductById(id);
 
             if (productEntity == null)
                 return NotFound("Product not found");
+
+            Expenses expenseEntity = _repository.Expenses.GetExpenseById(productEntity.ExpensesId);
+            expenseEntity.Total -= productEntity.Cost;
+
+            _repository.Expenses.UpdateExpense(expenseEntity);
             _repository.Product.DeleteProduct(productEntity);
+
             _repository.Save();
 
             return NoContent();
         }
+
+        //GET: /api/Finance/GetUserData/123
+        [HttpGet("GetUserData/{userId}")]
+        public IActionResult GetUserData(Guid userId)
+        {
+            IEnumerable<Expenses> expensesEntity = _repository.Expenses.GetUserExpensesWithDetails(userId);
+            IEnumerable<ExpensesDto> expensesResult = (IEnumerable<ExpensesDto>)_mapper.Map<ExpensesDto>(expensesEntity);
+            return Ok(expensesResult);
+        }
+
+        //GET /api/Finance/GetTodayUserData/123
+        [HttpGet("GetTodayUserData/{userId}")]
+        public IActionResult GetTodayUserData(Guid userId)
+        {
+            long timestamp = Time.GetTodayTimestamp();
+            Expenses expensesEntity = _repository.Expenses.GetUserExpenseByDateWithDetails(userId, timestamp);
+            ExpensesDto expensesResult = _mapper.Map<ExpensesDto>(expensesEntity);
+            return Ok(expensesResult);
+        }
+
+
     }
 }

@@ -1,16 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using AutoMapper;
 using Contracts;
 using Entities;
 using Entities.DataTransferObjects;
 using Microsoft.AspNetCore.Mvc;
-using Repository;
 
 namespace MistkurtAPI.Controllers
 {
-    [Route("api/admin")]
+    [Route("api/{controller}")]
     [ApiController]
     public class AdminController : ControllerBase
     {
@@ -35,6 +33,7 @@ namespace MistkurtAPI.Controllers
             return Ok(usersResult);
         }
 
+        // GET: api/admin/getUser/{id}
         [HttpGet("getUser/{id}")]
         public IActionResult GetUserById(Guid id)
         {
@@ -51,28 +50,50 @@ namespace MistkurtAPI.Controllers
         }
 
 
-        // POST: api/Admin
+        // POST: api/admin
         [HttpPost]
-        public async Task<ActionResult> PostUser(User user)
+        public ActionResult CreateUser([FromBody] UserForCreationDto user)
         {
-            if(_postgres.UserExistsByEmail(user.Email))
-                return Conflict();
+            if(_repository.User.EmailExists(user.Email))
+                return BadRequest();
 
-            await _postgres.AddNewUserAsync(user);
+            User userEntity = _mapper.Map<User>(user);
 
-            return Ok();
+            _repository.User.CreateUser(userEntity);
+            _repository.Save();
+
+            UserDto createdUser = _mapper.Map<UserDto>(userEntity);
+
+            return Created("createUser", createdUser);
         }
 
-        // DELETE: api/Admin/5
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteUser(Guid id)
+        //PUT: api/admin/5
+        [HttpPut("{id}")]
+        public ActionResult UpdateUser(Guid id, [FromBody] UserForUpdateDto user)
         {
-            bool status = await _postgres.DeleteUser(id);
+            User userEntity = _repository.User.GetUserById(id);
 
-            if (status)
-                return NoContent();
-            else
-                return NotFound();
+            if (userEntity == null)
+                return NotFound("User not found");
+
+            _mapper.Map(user, userEntity);
+            _repository.User.UpdateUser(userEntity);
+            _repository.Save();
+            return NoContent();
+        }
+
+        // DELETE: api/admin/5
+        [HttpDelete("{id}")]
+        public IActionResult DeleteUser(Guid id)
+        {
+            User user = _repository.User.GetUserById(id);
+            if (user == null)
+                return NotFound("User not found");
+
+            _repository.User.DeleteUser(user);
+            _repository.Save();
+
+            return NoContent();
         }
 
 

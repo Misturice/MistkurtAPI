@@ -1,8 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
-using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
-namespace MistkurtAPI.Migrations
+namespace Entities.Migrations
 {
     public partial class initial : Migration
     {
@@ -17,6 +16,7 @@ namespace MistkurtAPI.Migrations
                 {
                     UserID = table.Column<Guid>(type: "uuid", nullable: false),
                     Email = table.Column<string>(type: "text", nullable: false),
+                    Name = table.Column<string>(type: "text", nullable: false),
                     Role = table.Column<int>(type: "integer", nullable: false),
                     Token = table.Column<string>(type: "text", nullable: true)
                 },
@@ -29,10 +29,9 @@ namespace MistkurtAPI.Migrations
                 name: "Expenses",
                 columns: table => new
                 {
-                    ExpensesID = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    Date = table.Column<int>(type: "integer", nullable: false),
-                    Total = table.Column<int>(type: "integer", nullable: false),
+                    ExpensesID = table.Column<Guid>(type: "uuid", nullable: false),
+                    Date = table.Column<long>(type: "bigint", nullable: false),
+                    Total = table.Column<float>(type: "real", nullable: false),
                     UserID = table.Column<Guid>(type: "uuid", nullable: false)
                 },
                 constraints: table =>
@@ -50,12 +49,12 @@ namespace MistkurtAPI.Migrations
                 name: "Products",
                 columns: table => new
                 {
-                    ProductID = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    ProductID = table.Column<Guid>(type: "uuid", nullable: false),
                     Name = table.Column<string>(type: "text", nullable: false),
-                    Tag = table.Column<string>(type: "text", nullable: true),
+                    Tag = table.Column<string>(type: "text", nullable: false),
                     Type = table.Column<string>(type: "text", nullable: true),
-                    ExpensesID = table.Column<int>(type: "integer", nullable: false)
+                    Cost = table.Column<float>(type: "real", nullable: false),
+                    ExpensesID = table.Column<Guid>(type: "uuid", nullable: false)
                 },
                 constraints: table =>
                 {

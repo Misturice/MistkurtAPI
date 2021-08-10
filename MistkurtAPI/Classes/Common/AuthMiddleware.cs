@@ -1,14 +1,13 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using MistkurtAPI;
-using MistkurtAPI.Models;
-using MistkurtAPI.Classes.Databases;
+﻿using Contracts;
+using Entities;
+using Microsoft.AspNetCore.Authorization;
 internal class ProperTokenForUser : AuthorizeAttribute
 {
     const string POLICY_PREFIX = "ProperTokenForUser";
 
-    public ProperTokenForUser(MistKurtContext context, string email, string token)
+    public ProperTokenForUser(IRepositoryWrapper repository, string email, string token)
     {
-        User user = context.Users.Find(email);
+        User user = repository.User.GetUserByEmail(email);
         user.Token.Equals(token);
     }
 }

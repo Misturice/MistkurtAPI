@@ -20,6 +20,8 @@ namespace Entities
         public Guid Id { get; set; }
         [Column("Email"), Required(ErrorMessage = "Email is required"), Index(IsUnique = true)]
         public string Email { get; set; }
+        [Column("Name"), Required(ErrorMessage = "Name is required")]
+        public string Name { get; set; }
         [Column("Role"), Required(ErrorMessage = "Role is required")]
         public Role Role { get; set; }
         [Column("Token"), Index("TokenIndex")]

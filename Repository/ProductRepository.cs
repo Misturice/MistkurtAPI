@@ -14,5 +14,25 @@ namespace Repository
         {
 
         }
+
+        public void CreateProduct(Product product)
+        {
+            Create(product);
+        }
+
+        public void DeleteProduct(Product product)
+        {
+            Delete(product);
+        }
+
+        public void UpdateProduct(Product product)
+        {
+            Update(product);
+        }
+
+        public Product GetProductById(Guid id)
+        {
+            return FindByKey(id);
+        }
     }
 }
