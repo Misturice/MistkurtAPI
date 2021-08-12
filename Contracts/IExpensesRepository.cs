@@ -11,9 +11,13 @@ namespace Contracts
     {
         IEnumerable<Expenses> GetAllUserExpenses(Guid id);
         IEnumerable<Expenses> GetUserExpensesWithDetails(Guid id);
+        IEnumerable<Expenses> GetUserExpensesByRange(Guid id, long startDate, long endDate);
+        IEnumerable<Expenses> GetUserExpensesByRangeWithDetails(Guid id, long startDate, long endDate);
         Expenses GetExpenseById(Guid id);
         Expenses GetUserExpenseByDate(Guid userId, long date);
         Expenses GetUserExpenseByDateWithDetails(Guid userId, long date);
+
+
 
         bool ExpenseExists(Guid userId, long date);
 

@@ -30,7 +30,7 @@ namespace MistkurtAPI.Controllers
 
         // POST: /api/Finance/AddProduct/5/000000000
         [HttpPost("AddProduct/{userId}/{date}")]
-        public IActionResult AddProducts([FromBody] IEnumerable<ProductForCreationDto> products, Guid userId, int date)
+        public IActionResult AddProduct([FromBody] ProductForCreationDto product, Guid userId, int date)
         {
             Expenses expense = null;
             bool createdNewExpense = false;
@@ -48,16 +48,11 @@ namespace MistkurtAPI.Controllers
 
 
 
-            float newTotalCost = 0f;
-
-            foreach (ProductForCreationDto product in products)
-            {
-                newTotalCost += product.Cost;
-                Product productEntity = _mapper.Map<Product>(product);
-                productEntity.ExpensesId = expense.Id;
-                expense.Products.Add(productEntity);
-                // _repository.Product.CreateProduct(productEntity);
-            }
+            float newTotalCost = (float)product.Cost;
+            Product productEntity = _mapper.Map<Product>(product);
+            productEntity.ExpensesId = expense.Id;
+            expense.Products.Add(productEntity);
+            
 
             expense.Total += newTotalCost;
 
@@ -68,7 +63,7 @@ namespace MistkurtAPI.Controllers
 
             _repository.Save();
 
-            return NoContent();
+            return Ok(productEntity.Id);
         }
 
         // PUT: /api/Finance/UpdateProduct/123
@@ -125,6 +120,14 @@ namespace MistkurtAPI.Controllers
             return Ok(expensesResult);
         }
 
+        //GET: /api/Finance/GetRangeUserData/123/123/132
+        [HttpGet("GeRangetUserData/{userId}/{startDate}/{endDate}")]
+        public IActionResult GetRangeUserData(Guid userId, long startDate, long endDate)
+        {
+            IEnumerable<Expenses> expensesEntity = _repository.Expenses.GetUserExpensesByRangeWithDetails(userId, startDate, endDate);
+            IEnumerable<ExpensesDto> expensesResult = (IEnumerable<ExpensesDto>)_mapper.Map<ExpensesDto>(expensesEntity);
+            return Ok(expensesResult);
+        }
 
     }
 }

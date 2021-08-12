@@ -64,5 +64,17 @@ namespace Repository
                 .Include(e => e.Products)
                 .FirstOrDefault();
         }
+
+        public IEnumerable<Expenses> GetUserExpensesByRange(Guid userId, long startDate, long endDate)
+        {
+            return FindByCondition(elem => elem.UserId.Equals(userId) && elem.Date >= startDate && elem.Date <= endDate).ToList();
+        }
+
+        public IEnumerable<Expenses> GetUserExpensesByRangeWithDetails(Guid userId, long startDate, long endDate)
+        {
+            return FindByCondition(elem => elem.UserId.Equals(userId) && elem.Date >= startDate && elem.Date <= endDate)
+                .Include(elem => elem.Products)
+                .ToList();
+        }
     }
 }
