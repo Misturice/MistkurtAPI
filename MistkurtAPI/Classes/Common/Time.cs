@@ -25,5 +25,12 @@ namespace MistkurtAPI.Classes.Common
             return now.ToUnixTimeSeconds();
         }
 
+        public static long GetStartOfMonthTimestamp()
+        {
+            DateTime date = new();
+            DateTimeOffset startOfMonth = (DateTimeOffset)new DateTime(date.Year, date.Month, 1).ToUniversalTime();
+            return startOfMonth.ToUnixTimeSeconds();
+        }
+
     }
 }

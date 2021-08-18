@@ -28,12 +28,12 @@ namespace Repository
 
         public bool ExpenseExists(Guid userId, long date)
         {
-            return Exists(expense => expense.UserId.Equals(userId) && expense.Date.Equals(date));
+            return Exists(elem => elem.UserId.Equals(userId) && elem.Date.Equals(date));
         }
 
         public IEnumerable<Expenses> GetAllUserExpenses(Guid userId)
         {
-            return FindByCondition(expense => expense.UserId.Equals(userId)).ToList();
+            return FindByCondition(elem => elem.UserId.Equals(userId)).ToList();
         }
 
         public Expenses GetExpenseById(Guid id)
@@ -43,8 +43,9 @@ namespace Repository
 
         public IEnumerable<Expenses> GetUserExpensesWithDetails(Guid id)
         {
-            return FindByCondition(expense => expense.UserId.Equals(id))
-                .Include(exp => exp.Products)
+            return FindByCondition(elem => elem.UserId.Equals(id))
+                .Include(elem => elem.Products)
+                .OrderBy(elem => elem.Date)
                 .ToList();
         }
 
@@ -55,25 +56,28 @@ namespace Repository
 
         public Expenses GetUserExpenseByDate(Guid userId, long date)
         {
-            return FindByCondition(expense => expense.UserId.Equals(userId) && expense.Date.Equals(date)).FirstOrDefault();
+            return FindByCondition(elem => elem.UserId.Equals(userId) && elem.Date.Equals(date)).FirstOrDefault();
         }
 
         public Expenses GetUserExpenseByDateWithDetails(Guid userId, long date)
         {
-            return FindByCondition(expense => expense.UserId.Equals(userId) && expense.Date.Equals(date))
-                .Include(e => e.Products)
+            return FindByCondition(elem => elem.UserId.Equals(userId) && elem.Date.Equals(date))
+                .Include(elem => elem.Products)
                 .FirstOrDefault();
         }
 
         public IEnumerable<Expenses> GetUserExpensesByRange(Guid userId, long startDate, long endDate)
         {
-            return FindByCondition(elem => elem.UserId.Equals(userId) && elem.Date >= startDate && elem.Date <= endDate).ToList();
+            return FindByCondition(elem => elem.UserId.Equals(userId) && elem.Date >= startDate && elem.Date <= endDate)
+                .OrderBy(elem => elem.Date)
+                .ToList();
         }
 
         public IEnumerable<Expenses> GetUserExpensesByRangeWithDetails(Guid userId, long startDate, long endDate)
         {
             return FindByCondition(elem => elem.UserId.Equals(userId) && elem.Date >= startDate && elem.Date <= endDate)
                 .Include(elem => elem.Products)
+                .OrderBy(elem => elem.Date)
                 .ToList();
         }
     }

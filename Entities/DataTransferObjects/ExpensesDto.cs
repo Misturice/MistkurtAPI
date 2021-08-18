@@ -11,6 +11,7 @@ namespace Entities.DataTransferObjects
         public long Date { get; set; }
         public float Total { get; set; }
         public Guid Id { get; set; }
-        public IEnumerable<ProductDto> Products { get; set; }
+        //public IEnumerable<ProductDto> Products { get; set; }
+
     }
 }

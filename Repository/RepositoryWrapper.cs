@@ -10,7 +10,6 @@ namespace Repository
 {
     public class RepositoryWrapper : IRepositoryWrapper
     {
-        // TODO finish this, add find by key method;
         private RepositoryContext _repoContext;
         private IUserRepository _user;
         private IExpensesRepository _expenses;

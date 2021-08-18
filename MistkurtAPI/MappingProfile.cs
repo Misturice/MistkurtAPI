@@ -12,13 +12,24 @@ namespace MistkurtAPI
     {
         public MappingProfile()
         {
+            #region User
             CreateMap<User, UserDto>();
-            CreateMap<Expenses, ExpensesDto>();
-            CreateMap<Product, ProductDto>();
             CreateMap<UserForCreationDto, User>();
             CreateMap<UserForUpdateDto, User>();
+            #endregion
+
+            #region Expenses
+            CreateMap<Expenses, ExpensesDto>();
+            CreateMap<Expenses, ExpensesDashboardDto>();
+            #endregion
+
+            #region Products
+            CreateMap<Product, ProductDto>();
             CreateMap<ProductForCreationDto, Product>();
             CreateMap<ProductForUpdateDto, Product>();
+            #endregion
+
+
         }
     }
 }
