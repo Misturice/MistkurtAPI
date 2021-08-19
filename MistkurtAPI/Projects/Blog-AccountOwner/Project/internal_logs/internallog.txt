@@ -11554,3 +11554,1323 @@
 2021-08-18 21:17:26.0263 Trace Closing Layout Renderer: ${message}
 2021-08-18 21:17:26.0263 Debug Finished closing logging configuration.
 2021-08-18 21:17:26.0263 Info Logger has been shut down.
+2021-08-19 13:46:54.8243 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2021-08-19 13:46:54.9356 Debug Found assembly location directory: 'D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2021-08-19 13:46:54.9356 Debug Auto loading based on NLog-Assembly found location: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0
+2021-08-19 13:46:54.9356 Debug Search for auto loading files in location: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0
+2021-08-19 13:46:54.9356 Debug Start auto loading, location: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0
+2021-08-19 13:46:54.9356 Info Auto loading assembly file: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0\NLog.Extensions.Logging.dll
+2021-08-19 13:46:54.9356 Info Loading assembly file: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0\NLog.Extensions.Logging.dll
+2021-08-19 13:46:55.0184 Info NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 1.7.3.1580. Product version: 1.7.3+5b992558f6b1c15def05efe3168eb20d7965b82a. GlobalAssemblyCache: False
+2021-08-19 13:46:55.0184 Debug ScanAssembly('NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2021-08-19 13:46:55.0184 Info Auto loading assembly file: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0\NLog.Extensions.Logging.dll succeeded!
+2021-08-19 13:46:55.0184 Trace Assembly 'Microsoft.Extensions.Logging, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2021-08-19 13:46:55.0184 Trace Assembly 'Microsoft.Extensions.Logging.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2021-08-19 13:46:55.0184 Trace Assembly 'NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c' will be hidden in callsite stacktrace
+2021-08-19 13:46:55.0184 Debug Auto loading done
+2021-08-19 13:46:55.0184 Info Message Template Auto Format enabled
+2021-08-19 13:46:55.0331 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 13:46:55.0331 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-08-19 13:46:55.0331 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2021-08-19 13:46:55.0331 Trace Wrapping NLog.LayoutRenderers.LevelLayoutRenderer with NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper
+2021-08-19 13:46:55.0331 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 13:46:55.0331 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 13:46:55.0331 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 13:46:55.0331 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-08-19 13:46:55.0437 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-08-19 13:46:55.0437 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-08-19 13:46:55.0437 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 13:46:55.0437 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 13:46:55.0437 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 13:46:55.0437 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2021-08-19 13:46:55.0437 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 13:46:55.0437 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-08-19 13:46:55.0437 Debug Setting 'NLog.Targets.FileTarget.name' to 'logfile'
+2021-08-19 13:46:55.0437 Debug Setting 'NLog.Targets.FileTarget.fileName' to 'd:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt'
+2021-08-19 13:46:55.0437 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 13:46:55.0437 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-08-19 13:46:55.0437 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate} ${level:uppercase=true} ${message}'
+2021-08-19 13:46:55.0437 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 13:46:55.0437 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-08-19 13:46:55.0437 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2021-08-19 13:46:55.0437 Trace Wrapping NLog.LayoutRenderers.LevelLayoutRenderer with NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper
+2021-08-19 13:46:55.0437 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 13:46:55.0437 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 13:46:55.0437 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 13:46:55.0437 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-08-19 13:46:55.0437 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-08-19 13:46:55.0437 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-08-19 13:46:55.0437 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 13:46:55.0437 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 13:46:55.0437 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 13:46:55.0437 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-08-19 13:46:55.0437 Info Adding target FileTarget(Name=logfile)
+2021-08-19 13:46:55.0437 Debug Registered target logfile: NLog.Targets.FileTarget
+2021-08-19 13:46:55.0437 Trace ParseRulesElement
+2021-08-19 13:46:55.0689 Debug Watching path 'D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI' filter 'nlog.config' for changes.
+2021-08-19 13:46:55.0689 Debug --- NLog configuration dump ---
+2021-08-19 13:46:55.0689 Debug Targets:
+2021-08-19 13:46:55.0689 Debug File Target[logfile]
+2021-08-19 13:46:55.0689 Debug Rules:
+2021-08-19 13:46:55.0689 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2021-08-19 13:46:55.0689 Debug --- End of NLog configuration dump ---
+2021-08-19 13:46:55.0749 Trace FindReachableObject<System.Object>:
+2021-08-19 13:46:55.0749 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]'
+2021-08-19 13:46:55.0749 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2021-08-19 13:46:55.0749 Trace  Scanning FileTarget 'File Target[logfile]'
+2021-08-19 13:46:55.0749 Trace   Scanning Property FileName ''d:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt'' NLog.Layouts
+2021-08-19 13:46:55.0749 Trace   Scanning SimpleLayout ''d:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt''
+2021-08-19 13:46:55.0749 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 13:46:55.0749 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 13:46:55.0749 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-08-19 13:46:55.0749 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 13:46:55.0749 Trace   Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2021-08-19 13:46:55.0749 Trace   Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-08-19 13:46:55.0749 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 13:46:55.0749 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-08-19 13:46:55.0749 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 13:46:55.0749 Trace    Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-08-19 13:46:55.0749 Trace     Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-08-19 13:46:55.0749 Trace     Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-08-19 13:46:55.0749 Trace      Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 13:46:55.0749 Trace      Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 13:46:55.0749 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 13:46:55.0749 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-08-19 13:46:55.0749 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2021-08-19 13:46:55.0749 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2021-08-19 13:46:55.0749 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2021-08-19 13:46:55.0749 Info Validating config: TargetNames=logfile, ConfigItems=14, FilePath=D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI/nlog.config
+2021-08-19 13:46:55.0749 Debug Unused target checking is started... Rule Count: 1, Target Count: 1
+2021-08-19 13:46:55.0749 Debug Unused target checking is completed. Total Rule Count: 1, Total Target Count: 1, Unused Target Count: 0
+2021-08-19 13:46:55.0749 Trace Initializing Layout Renderer: ${message}
+2021-08-19 13:46:55.0896 Trace Initializing Layout Renderer: ${literal}
+2021-08-19 13:46:55.0896 Trace Initializing Layout Renderer: ${level}
+2021-08-19 13:46:55.0896 Trace Initializing SimpleLayout=Layout Renderer: ${level}
+2021-08-19 13:46:55.0896 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 13:46:55.0896 Trace Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-08-19 13:46:55.0896 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 13:46:55.0896 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 13:46:55.0896 Trace Initializing Layout Renderer: ${uppercase}
+2021-08-19 13:46:55.0896 Trace Initializing Layout Renderer: ${literal}
+2021-08-19 13:46:55.0896 Trace Initializing Layout Renderer: ${longdate}
+2021-08-19 13:46:55.0896 Trace Initializing '${longdate} ${level:uppercase=true} ${message}'
+2021-08-19 13:46:55.0896 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 13:46:55.0896 Trace Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-08-19 13:46:55.0896 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 13:46:55.0896 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-08-19 13:46:55.0896 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 13:46:55.0896 Trace  Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-08-19 13:46:55.0896 Trace   Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-08-19 13:46:55.0896 Trace   Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-08-19 13:46:55.0896 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 13:46:55.0896 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 13:46:55.0896 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 13:46:55.0896 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-08-19 13:46:55.0896 Trace Initializing Layout Renderer: ${literal}
+2021-08-19 13:46:55.0896 Trace Initializing Layout Renderer: ${shortdate}
+2021-08-19 13:46:55.0896 Trace Initializing Layout Renderer: ${literal}
+2021-08-19 13:46:55.0896 Trace Initializing 'd:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt'
+2021-08-19 13:46:55.0896 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 13:46:55.0896 Trace Scanning SimpleLayout ''d:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt''
+2021-08-19 13:46:55.0896 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 13:46:55.0896 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 13:46:55.0896 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-08-19 13:46:55.0896 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 13:46:55.0896 Trace Initializing File Target[logfile]
+2021-08-19 13:46:55.0896 Trace FindReachableObject<NLog.Layouts.Layout>:
+2021-08-19 13:46:55.0896 Trace Scanning FileTarget 'File Target[logfile]'
+2021-08-19 13:46:55.0896 Trace  Scanning Property FileName ''d:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt'' NLog.Layouts
+2021-08-19 13:46:55.0896 Trace  Scanning SimpleLayout ''d:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt''
+2021-08-19 13:46:55.0896 Trace  Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2021-08-19 13:46:55.0896 Trace  Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-08-19 13:46:55.1049 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2021-08-19 13:46:55.1049 Trace File Target[logfile] has 2 layouts
+2021-08-19 13:46:55.1049 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.RetryingMultiProcessFileAppender+Factory
+2021-08-19 19:46:34.8079 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2021-08-19 19:46:34.8689 Debug Found assembly location directory: 'D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2021-08-19 19:46:34.8689 Debug Auto loading based on NLog-Assembly found location: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0
+2021-08-19 19:46:34.8689 Debug Search for auto loading files in location: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0
+2021-08-19 19:46:34.8740 Debug Start auto loading, location: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0
+2021-08-19 19:46:34.8740 Info Auto loading assembly file: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0\NLog.Extensions.Logging.dll
+2021-08-19 19:46:34.8740 Info Loading assembly file: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0\NLog.Extensions.Logging.dll
+2021-08-19 19:46:34.9363 Info NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 1.7.3.1580. Product version: 1.7.3+5b992558f6b1c15def05efe3168eb20d7965b82a. GlobalAssemblyCache: False
+2021-08-19 19:46:34.9363 Debug ScanAssembly('NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2021-08-19 19:46:34.9363 Info Auto loading assembly file: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0\NLog.Extensions.Logging.dll succeeded!
+2021-08-19 19:46:34.9363 Trace Assembly 'Microsoft.Extensions.Logging, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2021-08-19 19:46:34.9363 Trace Assembly 'Microsoft.Extensions.Logging.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2021-08-19 19:46:34.9363 Trace Assembly 'NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c' will be hidden in callsite stacktrace
+2021-08-19 19:46:34.9363 Debug Auto loading done
+2021-08-19 19:46:34.9363 Info Message Template Auto Format enabled
+2021-08-19 19:46:34.9540 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 19:46:34.9540 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-08-19 19:46:34.9540 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2021-08-19 19:46:34.9540 Trace Wrapping NLog.LayoutRenderers.LevelLayoutRenderer with NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper
+2021-08-19 19:46:34.9540 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 19:46:34.9540 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 19:46:34.9540 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 19:46:34.9540 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-08-19 19:46:34.9540 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-08-19 19:46:34.9540 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-08-19 19:46:34.9540 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 19:46:34.9540 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 19:46:34.9647 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 19:46:34.9647 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2021-08-19 19:46:34.9647 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 19:46:34.9647 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-08-19 19:46:34.9647 Debug Setting 'NLog.Targets.FileTarget.name' to 'logfile'
+2021-08-19 19:46:34.9647 Debug Setting 'NLog.Targets.FileTarget.fileName' to 'd:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt'
+2021-08-19 19:46:34.9647 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 19:46:34.9647 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-08-19 19:46:34.9647 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate} ${level:uppercase=true} ${message}'
+2021-08-19 19:46:34.9647 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 19:46:34.9647 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-08-19 19:46:34.9647 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2021-08-19 19:46:34.9647 Trace Wrapping NLog.LayoutRenderers.LevelLayoutRenderer with NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper
+2021-08-19 19:46:34.9647 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 19:46:34.9647 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 19:46:34.9647 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 19:46:34.9647 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-08-19 19:46:34.9647 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-08-19 19:46:34.9647 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-08-19 19:46:34.9647 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 19:46:34.9647 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 19:46:34.9647 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 19:46:34.9647 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-08-19 19:46:34.9647 Info Adding target FileTarget(Name=logfile)
+2021-08-19 19:46:34.9647 Debug Registered target logfile: NLog.Targets.FileTarget
+2021-08-19 19:46:34.9647 Trace ParseRulesElement
+2021-08-19 19:46:34.9862 Debug Watching path 'D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI' filter 'nlog.config' for changes.
+2021-08-19 19:46:34.9862 Debug --- NLog configuration dump ---
+2021-08-19 19:46:34.9862 Debug Targets:
+2021-08-19 19:46:34.9862 Debug File Target[logfile]
+2021-08-19 19:46:34.9862 Debug Rules:
+2021-08-19 19:46:34.9862 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2021-08-19 19:46:34.9862 Debug --- End of NLog configuration dump ---
+2021-08-19 19:46:34.9862 Trace FindReachableObject<System.Object>:
+2021-08-19 19:46:34.9862 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]'
+2021-08-19 19:46:34.9862 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2021-08-19 19:46:34.9956 Trace  Scanning FileTarget 'File Target[logfile]'
+2021-08-19 19:46:34.9956 Trace   Scanning Property FileName ''d:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt'' NLog.Layouts
+2021-08-19 19:46:34.9956 Trace   Scanning SimpleLayout ''d:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt''
+2021-08-19 19:46:34.9956 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 19:46:34.9956 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 19:46:34.9956 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-08-19 19:46:34.9956 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 19:46:34.9956 Trace   Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2021-08-19 19:46:34.9956 Trace   Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-08-19 19:46:34.9956 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 19:46:34.9956 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-08-19 19:46:34.9956 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 19:46:34.9956 Trace    Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-08-19 19:46:34.9956 Trace     Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-08-19 19:46:34.9956 Trace     Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-08-19 19:46:34.9956 Trace      Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 19:46:34.9956 Trace      Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 19:46:34.9956 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 19:46:34.9956 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-08-19 19:46:34.9956 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2021-08-19 19:46:34.9956 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2021-08-19 19:46:34.9956 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2021-08-19 19:46:34.9956 Info Validating config: TargetNames=logfile, ConfigItems=14, FilePath=D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI/nlog.config
+2021-08-19 19:46:35.0128 Debug Unused target checking is started... Rule Count: 1, Target Count: 1
+2021-08-19 19:46:35.0128 Debug Unused target checking is completed. Total Rule Count: 1, Total Target Count: 1, Unused Target Count: 0
+2021-08-19 19:46:35.0128 Trace Initializing Layout Renderer: ${message}
+2021-08-19 19:46:35.0128 Trace Initializing Layout Renderer: ${literal}
+2021-08-19 19:46:35.0128 Trace Initializing Layout Renderer: ${level}
+2021-08-19 19:46:35.0128 Trace Initializing SimpleLayout=Layout Renderer: ${level}
+2021-08-19 19:46:35.0128 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 19:46:35.0128 Trace Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-08-19 19:46:35.0128 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 19:46:35.0128 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 19:46:35.0293 Trace Initializing Layout Renderer: ${uppercase}
+2021-08-19 19:46:35.0293 Trace Initializing Layout Renderer: ${literal}
+2021-08-19 19:46:35.0293 Trace Initializing Layout Renderer: ${longdate}
+2021-08-19 19:46:35.0293 Trace Initializing '${longdate} ${level:uppercase=true} ${message}'
+2021-08-19 19:46:35.0293 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 19:46:35.0293 Trace Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-08-19 19:46:35.0293 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 19:46:35.0293 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-08-19 19:46:35.0293 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 19:46:35.0293 Trace  Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-08-19 19:46:35.0293 Trace   Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-08-19 19:46:35.0293 Trace   Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-08-19 19:46:35.0293 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 19:46:35.0293 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 19:46:35.0293 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 19:46:35.0293 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-08-19 19:46:35.0293 Trace Initializing Layout Renderer: ${literal}
+2021-08-19 19:46:35.0293 Trace Initializing Layout Renderer: ${shortdate}
+2021-08-19 19:46:35.0293 Trace Initializing Layout Renderer: ${literal}
+2021-08-19 19:46:35.0293 Trace Initializing 'd:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt'
+2021-08-19 19:46:35.0293 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 19:46:35.0293 Trace Scanning SimpleLayout ''d:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt''
+2021-08-19 19:46:35.0293 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 19:46:35.0293 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 19:46:35.0293 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-08-19 19:46:35.0293 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 19:46:35.0293 Trace Initializing File Target[logfile]
+2021-08-19 19:46:35.0293 Trace FindReachableObject<NLog.Layouts.Layout>:
+2021-08-19 19:46:35.0293 Trace Scanning FileTarget 'File Target[logfile]'
+2021-08-19 19:46:35.0293 Trace  Scanning Property FileName ''d:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt'' NLog.Layouts
+2021-08-19 19:46:35.0293 Trace  Scanning SimpleLayout ''d:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt''
+2021-08-19 19:46:35.0293 Trace  Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2021-08-19 19:46:35.0293 Trace  Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-08-19 19:46:35.0293 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2021-08-19 19:46:35.0293 Trace File Target[logfile] has 2 layouts
+2021-08-19 19:46:35.0293 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.RetryingMultiProcessFileAppender+Factory
+2021-08-19 19:54:35.9130 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2021-08-19 19:54:35.9698 Debug Found assembly location directory: 'D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2021-08-19 19:54:35.9698 Debug Auto loading based on NLog-Assembly found location: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0
+2021-08-19 19:54:35.9698 Debug Search for auto loading files in location: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0
+2021-08-19 19:54:35.9698 Debug Start auto loading, location: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0
+2021-08-19 19:54:35.9698 Info Auto loading assembly file: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0\NLog.Extensions.Logging.dll
+2021-08-19 19:54:35.9698 Info Loading assembly file: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0\NLog.Extensions.Logging.dll
+2021-08-19 19:54:35.9898 Info NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 1.7.3.1580. Product version: 1.7.3+5b992558f6b1c15def05efe3168eb20d7965b82a. GlobalAssemblyCache: False
+2021-08-19 19:54:35.9898 Debug ScanAssembly('NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2021-08-19 19:54:35.9898 Info Auto loading assembly file: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0\NLog.Extensions.Logging.dll succeeded!
+2021-08-19 19:54:35.9898 Trace Assembly 'Microsoft.Extensions.Logging, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2021-08-19 19:54:35.9898 Trace Assembly 'Microsoft.Extensions.Logging.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2021-08-19 19:54:35.9898 Trace Assembly 'NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c' will be hidden in callsite stacktrace
+2021-08-19 19:54:35.9898 Debug Auto loading done
+2021-08-19 19:54:35.9898 Info Message Template Auto Format enabled
+2021-08-19 19:54:36.0050 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 19:54:36.0050 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-08-19 19:54:36.0111 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2021-08-19 19:54:36.0111 Trace Wrapping NLog.LayoutRenderers.LevelLayoutRenderer with NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper
+2021-08-19 19:54:36.0111 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 19:54:36.0111 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 19:54:36.0111 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 19:54:36.0111 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-08-19 19:54:36.0111 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-08-19 19:54:36.0111 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-08-19 19:54:36.0111 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 19:54:36.0111 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 19:54:36.0111 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 19:54:36.0111 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2021-08-19 19:54:36.0111 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 19:54:36.0111 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-08-19 19:54:36.0111 Debug Setting 'NLog.Targets.FileTarget.name' to 'logfile'
+2021-08-19 19:54:36.0111 Debug Setting 'NLog.Targets.FileTarget.fileName' to 'd:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt'
+2021-08-19 19:54:36.0111 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 19:54:36.0111 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-08-19 19:54:36.0111 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate} ${level:uppercase=true} ${message}'
+2021-08-19 19:54:36.0111 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 19:54:36.0111 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-08-19 19:54:36.0111 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2021-08-19 19:54:36.0111 Trace Wrapping NLog.LayoutRenderers.LevelLayoutRenderer with NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper
+2021-08-19 19:54:36.0111 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 19:54:36.0111 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 19:54:36.0111 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 19:54:36.0111 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-08-19 19:54:36.0111 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-08-19 19:54:36.0111 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-08-19 19:54:36.0111 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 19:54:36.0111 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 19:54:36.0111 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 19:54:36.0266 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-08-19 19:54:36.0266 Info Adding target FileTarget(Name=logfile)
+2021-08-19 19:54:36.0266 Debug Registered target logfile: NLog.Targets.FileTarget
+2021-08-19 19:54:36.0266 Trace ParseRulesElement
+2021-08-19 19:54:36.0266 Debug Watching path 'D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI' filter 'nlog.config' for changes.
+2021-08-19 19:54:36.0266 Debug --- NLog configuration dump ---
+2021-08-19 19:54:36.0266 Debug Targets:
+2021-08-19 19:54:36.0266 Debug File Target[logfile]
+2021-08-19 19:54:36.0266 Debug Rules:
+2021-08-19 19:54:36.0266 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2021-08-19 19:54:36.0266 Debug --- End of NLog configuration dump ---
+2021-08-19 19:54:36.0445 Trace FindReachableObject<System.Object>:
+2021-08-19 19:54:36.0445 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]'
+2021-08-19 19:54:36.0445 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2021-08-19 19:54:36.0445 Trace  Scanning FileTarget 'File Target[logfile]'
+2021-08-19 19:54:36.0445 Trace   Scanning Property FileName ''d:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt'' NLog.Layouts
+2021-08-19 19:54:36.0445 Trace   Scanning SimpleLayout ''d:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt''
+2021-08-19 19:54:36.0445 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 19:54:36.0445 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 19:54:36.0445 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-08-19 19:54:36.0445 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 19:54:36.0445 Trace   Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2021-08-19 19:54:36.0445 Trace   Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-08-19 19:54:36.0445 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 19:54:36.0445 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-08-19 19:54:36.0445 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 19:54:36.0445 Trace    Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-08-19 19:54:36.0445 Trace     Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-08-19 19:54:36.0445 Trace     Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-08-19 19:54:36.0445 Trace      Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 19:54:36.0445 Trace      Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 19:54:36.0445 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 19:54:36.0445 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-08-19 19:54:36.0445 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2021-08-19 19:54:36.0445 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2021-08-19 19:54:36.0445 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2021-08-19 19:54:36.0445 Info Validating config: TargetNames=logfile, ConfigItems=14, FilePath=D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI/nlog.config
+2021-08-19 19:54:36.0445 Debug Unused target checking is started... Rule Count: 1, Target Count: 1
+2021-08-19 19:54:36.0445 Debug Unused target checking is completed. Total Rule Count: 1, Total Target Count: 1, Unused Target Count: 0
+2021-08-19 19:54:36.0584 Trace Initializing Layout Renderer: ${message}
+2021-08-19 19:54:36.0584 Trace Initializing Layout Renderer: ${literal}
+2021-08-19 19:54:36.0584 Trace Initializing Layout Renderer: ${level}
+2021-08-19 19:54:36.0584 Trace Initializing SimpleLayout=Layout Renderer: ${level}
+2021-08-19 19:54:36.0584 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 19:54:36.0584 Trace Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-08-19 19:54:36.0584 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 19:54:36.0584 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 19:54:36.0584 Trace Initializing Layout Renderer: ${uppercase}
+2021-08-19 19:54:36.0584 Trace Initializing Layout Renderer: ${literal}
+2021-08-19 19:54:36.0584 Trace Initializing Layout Renderer: ${longdate}
+2021-08-19 19:54:36.0584 Trace Initializing '${longdate} ${level:uppercase=true} ${message}'
+2021-08-19 19:54:36.0584 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 19:54:36.0584 Trace Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-08-19 19:54:36.0584 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 19:54:36.0584 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-08-19 19:54:36.0584 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 19:54:36.0584 Trace  Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-08-19 19:54:36.0584 Trace   Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-08-19 19:54:36.0584 Trace   Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-08-19 19:54:36.0584 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 19:54:36.0584 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 19:54:36.0584 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 19:54:36.0584 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-08-19 19:54:36.0584 Trace Initializing Layout Renderer: ${literal}
+2021-08-19 19:54:36.0584 Trace Initializing Layout Renderer: ${shortdate}
+2021-08-19 19:54:36.0584 Trace Initializing Layout Renderer: ${literal}
+2021-08-19 19:54:36.0584 Trace Initializing 'd:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt'
+2021-08-19 19:54:36.0584 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 19:54:36.0584 Trace Scanning SimpleLayout ''d:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt''
+2021-08-19 19:54:36.0584 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 19:54:36.0584 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 19:54:36.0584 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-08-19 19:54:36.0584 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 19:54:36.0584 Trace Initializing File Target[logfile]
+2021-08-19 19:54:36.0739 Trace FindReachableObject<NLog.Layouts.Layout>:
+2021-08-19 19:54:36.0739 Trace Scanning FileTarget 'File Target[logfile]'
+2021-08-19 19:54:36.0739 Trace  Scanning Property FileName ''d:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt'' NLog.Layouts
+2021-08-19 19:54:36.0739 Trace  Scanning SimpleLayout ''d:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt''
+2021-08-19 19:54:36.0739 Trace  Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2021-08-19 19:54:36.0739 Trace  Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-08-19 19:54:36.0739 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2021-08-19 19:54:36.0739 Trace File Target[logfile] has 2 layouts
+2021-08-19 19:54:36.0739 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.RetryingMultiProcessFileAppender+Factory
+2021-08-19 20:17:24.9435 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2021-08-19 20:17:24.9963 Debug Found assembly location directory: 'D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2021-08-19 20:17:24.9963 Debug Auto loading based on NLog-Assembly found location: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0
+2021-08-19 20:17:24.9963 Debug Search for auto loading files in location: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0
+2021-08-19 20:17:24.9963 Debug Start auto loading, location: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0
+2021-08-19 20:17:24.9963 Info Auto loading assembly file: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0\NLog.Extensions.Logging.dll
+2021-08-19 20:17:24.9963 Info Loading assembly file: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0\NLog.Extensions.Logging.dll
+2021-08-19 20:17:25.0136 Info NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 1.7.3.1580. Product version: 1.7.3+5b992558f6b1c15def05efe3168eb20d7965b82a. GlobalAssemblyCache: False
+2021-08-19 20:17:25.0136 Debug ScanAssembly('NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2021-08-19 20:17:25.0136 Info Auto loading assembly file: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0\NLog.Extensions.Logging.dll succeeded!
+2021-08-19 20:17:25.0136 Trace Assembly 'Microsoft.Extensions.Logging, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2021-08-19 20:17:25.0136 Trace Assembly 'Microsoft.Extensions.Logging.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2021-08-19 20:17:25.0136 Trace Assembly 'NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c' will be hidden in callsite stacktrace
+2021-08-19 20:17:25.0136 Debug Auto loading done
+2021-08-19 20:17:25.0136 Info Message Template Auto Format enabled
+2021-08-19 20:17:25.0271 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:17:25.0271 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-08-19 20:17:25.0271 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2021-08-19 20:17:25.0271 Trace Wrapping NLog.LayoutRenderers.LevelLayoutRenderer with NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper
+2021-08-19 20:17:25.0271 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:17:25.0271 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 20:17:25.0271 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:17:25.0271 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-08-19 20:17:25.0271 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-08-19 20:17:25.0271 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-08-19 20:17:25.0271 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:17:25.0271 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 20:17:25.0271 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:17:25.0271 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2021-08-19 20:17:25.0271 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:17:25.0271 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-08-19 20:17:25.0435 Debug Setting 'NLog.Targets.FileTarget.name' to 'logfile'
+2021-08-19 20:17:25.0435 Debug Setting 'NLog.Targets.FileTarget.fileName' to 'd:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt'
+2021-08-19 20:17:25.0435 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:17:25.0435 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-08-19 20:17:25.0435 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate} ${level:uppercase=true} ${message}'
+2021-08-19 20:17:25.0435 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:17:25.0435 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-08-19 20:17:25.0435 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2021-08-19 20:17:25.0435 Trace Wrapping NLog.LayoutRenderers.LevelLayoutRenderer with NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper
+2021-08-19 20:17:25.0435 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:17:25.0435 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 20:17:25.0435 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:17:25.0435 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-08-19 20:17:25.0435 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-08-19 20:17:25.0435 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-08-19 20:17:25.0435 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:17:25.0435 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 20:17:25.0435 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:17:25.0435 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-08-19 20:17:25.0435 Info Adding target FileTarget(Name=logfile)
+2021-08-19 20:17:25.0435 Debug Registered target logfile: NLog.Targets.FileTarget
+2021-08-19 20:17:25.0435 Trace ParseRulesElement
+2021-08-19 20:17:25.0600 Debug Watching path 'D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI' filter 'nlog.config' for changes.
+2021-08-19 20:17:25.0600 Debug --- NLog configuration dump ---
+2021-08-19 20:17:25.0600 Debug Targets:
+2021-08-19 20:17:25.0600 Debug File Target[logfile]
+2021-08-19 20:17:25.0600 Debug Rules:
+2021-08-19 20:17:25.0600 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2021-08-19 20:17:25.0600 Debug --- End of NLog configuration dump ---
+2021-08-19 20:17:25.0600 Trace FindReachableObject<System.Object>:
+2021-08-19 20:17:25.0600 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]'
+2021-08-19 20:17:25.0600 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2021-08-19 20:17:25.0600 Trace  Scanning FileTarget 'File Target[logfile]'
+2021-08-19 20:17:25.0600 Trace   Scanning Property FileName ''d:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt'' NLog.Layouts
+2021-08-19 20:17:25.0600 Trace   Scanning SimpleLayout ''d:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt''
+2021-08-19 20:17:25.0600 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:17:25.0600 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:17:25.0600 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-08-19 20:17:25.0600 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:17:25.0600 Trace   Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2021-08-19 20:17:25.0600 Trace   Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-08-19 20:17:25.0600 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:17:25.0600 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-08-19 20:17:25.0600 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:17:25.0600 Trace    Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-08-19 20:17:25.0600 Trace     Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-08-19 20:17:25.0600 Trace     Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-08-19 20:17:25.0600 Trace      Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:17:25.0600 Trace      Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 20:17:25.0600 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:17:25.0600 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-08-19 20:17:25.0600 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2021-08-19 20:17:25.0600 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2021-08-19 20:17:25.0600 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2021-08-19 20:17:25.0600 Info Validating config: TargetNames=logfile, ConfigItems=14, FilePath=D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI/nlog.config
+2021-08-19 20:17:25.0748 Debug Unused target checking is started... Rule Count: 1, Target Count: 1
+2021-08-19 20:17:25.0748 Debug Unused target checking is completed. Total Rule Count: 1, Total Target Count: 1, Unused Target Count: 0
+2021-08-19 20:17:25.0748 Trace Initializing Layout Renderer: ${message}
+2021-08-19 20:17:25.0748 Trace Initializing Layout Renderer: ${literal}
+2021-08-19 20:17:25.0748 Trace Initializing Layout Renderer: ${level}
+2021-08-19 20:17:25.0748 Trace Initializing SimpleLayout=Layout Renderer: ${level}
+2021-08-19 20:17:25.0748 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:17:25.0748 Trace Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-08-19 20:17:25.0748 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:17:25.0748 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 20:17:25.0748 Trace Initializing Layout Renderer: ${uppercase}
+2021-08-19 20:17:25.0748 Trace Initializing Layout Renderer: ${literal}
+2021-08-19 20:17:25.0748 Trace Initializing Layout Renderer: ${longdate}
+2021-08-19 20:17:25.0748 Trace Initializing '${longdate} ${level:uppercase=true} ${message}'
+2021-08-19 20:17:25.0748 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:17:25.0748 Trace Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-08-19 20:17:25.0748 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:17:25.0748 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-08-19 20:17:25.0748 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:17:25.0748 Trace  Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-08-19 20:17:25.0748 Trace   Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-08-19 20:17:25.0748 Trace   Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-08-19 20:17:25.0748 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:17:25.0748 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 20:17:25.0748 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:17:25.0748 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-08-19 20:17:25.0748 Trace Initializing Layout Renderer: ${literal}
+2021-08-19 20:17:25.0748 Trace Initializing Layout Renderer: ${shortdate}
+2021-08-19 20:17:25.0748 Trace Initializing Layout Renderer: ${literal}
+2021-08-19 20:17:25.0748 Trace Initializing 'd:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt'
+2021-08-19 20:17:25.0748 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:17:25.0748 Trace Scanning SimpleLayout ''d:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt''
+2021-08-19 20:17:25.0748 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:17:25.0748 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:17:25.0748 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-08-19 20:17:25.0748 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:17:25.0895 Trace Initializing File Target[logfile]
+2021-08-19 20:17:25.0895 Trace FindReachableObject<NLog.Layouts.Layout>:
+2021-08-19 20:17:25.0895 Trace Scanning FileTarget 'File Target[logfile]'
+2021-08-19 20:17:25.0895 Trace  Scanning Property FileName ''d:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt'' NLog.Layouts
+2021-08-19 20:17:25.0895 Trace  Scanning SimpleLayout ''d:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt''
+2021-08-19 20:17:25.0895 Trace  Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2021-08-19 20:17:25.0895 Trace  Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-08-19 20:17:25.0895 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2021-08-19 20:17:25.0895 Trace File Target[logfile] has 2 layouts
+2021-08-19 20:17:25.0895 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.RetryingMultiProcessFileAppender+Factory
+2021-08-19 20:21:51.6994 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2021-08-19 20:21:51.7580 Debug Found assembly location directory: 'D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2021-08-19 20:21:51.7580 Debug Auto loading based on NLog-Assembly found location: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0
+2021-08-19 20:21:51.7580 Debug Search for auto loading files in location: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0
+2021-08-19 20:21:51.7629 Debug Start auto loading, location: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0
+2021-08-19 20:21:51.7629 Info Auto loading assembly file: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0\NLog.Extensions.Logging.dll
+2021-08-19 20:21:51.7629 Info Loading assembly file: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0\NLog.Extensions.Logging.dll
+2021-08-19 20:21:51.7629 Info NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 1.7.3.1580. Product version: 1.7.3+5b992558f6b1c15def05efe3168eb20d7965b82a. GlobalAssemblyCache: False
+2021-08-19 20:21:51.7771 Debug ScanAssembly('NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2021-08-19 20:21:51.7771 Info Auto loading assembly file: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0\NLog.Extensions.Logging.dll succeeded!
+2021-08-19 20:21:51.7771 Trace Assembly 'Microsoft.Extensions.Logging, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2021-08-19 20:21:51.7771 Trace Assembly 'Microsoft.Extensions.Logging.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2021-08-19 20:21:51.7771 Trace Assembly 'NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c' will be hidden in callsite stacktrace
+2021-08-19 20:21:51.7771 Debug Auto loading done
+2021-08-19 20:21:51.7771 Info Message Template Auto Format enabled
+2021-08-19 20:21:51.7771 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:21:51.7924 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-08-19 20:21:51.7924 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2021-08-19 20:21:51.7924 Trace Wrapping NLog.LayoutRenderers.LevelLayoutRenderer with NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper
+2021-08-19 20:21:51.7924 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:21:51.7924 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 20:21:51.7924 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:21:51.7924 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-08-19 20:21:51.7924 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-08-19 20:21:51.7924 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-08-19 20:21:51.7924 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:21:51.7924 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 20:21:51.7924 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:21:51.7924 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2021-08-19 20:21:51.7924 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:21:51.7924 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-08-19 20:21:51.7924 Debug Setting 'NLog.Targets.FileTarget.name' to 'logfile'
+2021-08-19 20:21:51.7924 Debug Setting 'NLog.Targets.FileTarget.fileName' to 'd:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt'
+2021-08-19 20:21:51.7924 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:21:51.7924 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-08-19 20:21:51.7924 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate} ${level:uppercase=true} ${message}'
+2021-08-19 20:21:51.7924 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:21:51.8084 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-08-19 20:21:51.8084 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2021-08-19 20:21:51.8084 Trace Wrapping NLog.LayoutRenderers.LevelLayoutRenderer with NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper
+2021-08-19 20:21:51.8084 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:21:51.8084 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 20:21:51.8084 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:21:51.8084 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-08-19 20:21:51.8084 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-08-19 20:21:51.8084 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-08-19 20:21:51.8084 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:21:51.8084 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 20:21:51.8084 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:21:51.8084 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-08-19 20:21:51.8084 Info Adding target FileTarget(Name=logfile)
+2021-08-19 20:21:51.8084 Debug Registered target logfile: NLog.Targets.FileTarget
+2021-08-19 20:21:51.8084 Trace ParseRulesElement
+2021-08-19 20:21:51.8240 Debug Watching path 'D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI' filter 'nlog.config' for changes.
+2021-08-19 20:21:51.8240 Debug --- NLog configuration dump ---
+2021-08-19 20:21:51.8240 Debug Targets:
+2021-08-19 20:21:51.8240 Debug File Target[logfile]
+2021-08-19 20:21:51.8240 Debug Rules:
+2021-08-19 20:21:51.8240 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2021-08-19 20:21:51.8240 Debug --- End of NLog configuration dump ---
+2021-08-19 20:21:51.8240 Trace FindReachableObject<System.Object>:
+2021-08-19 20:21:51.8240 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]'
+2021-08-19 20:21:51.8240 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2021-08-19 20:21:51.8240 Trace  Scanning FileTarget 'File Target[logfile]'
+2021-08-19 20:21:51.8240 Trace   Scanning Property FileName ''d:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt'' NLog.Layouts
+2021-08-19 20:21:51.8240 Trace   Scanning SimpleLayout ''d:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt''
+2021-08-19 20:21:51.8240 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:21:51.8240 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:21:51.8240 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-08-19 20:21:51.8240 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:21:51.8240 Trace   Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2021-08-19 20:21:51.8240 Trace   Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-08-19 20:21:51.8240 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:21:51.8240 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-08-19 20:21:51.8240 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:21:51.8240 Trace    Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-08-19 20:21:51.8240 Trace     Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-08-19 20:21:51.8240 Trace     Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-08-19 20:21:51.8240 Trace      Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:21:51.8240 Trace      Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 20:21:51.8240 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:21:51.8240 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-08-19 20:21:51.8240 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2021-08-19 20:21:51.8240 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2021-08-19 20:21:51.8240 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2021-08-19 20:21:51.8240 Info Validating config: TargetNames=logfile, ConfigItems=14, FilePath=D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI/nlog.config
+2021-08-19 20:21:51.8240 Debug Unused target checking is started... Rule Count: 1, Target Count: 1
+2021-08-19 20:21:51.8419 Debug Unused target checking is completed. Total Rule Count: 1, Total Target Count: 1, Unused Target Count: 0
+2021-08-19 20:21:51.8419 Trace Initializing Layout Renderer: ${message}
+2021-08-19 20:21:51.8419 Trace Initializing Layout Renderer: ${literal}
+2021-08-19 20:21:51.8419 Trace Initializing Layout Renderer: ${level}
+2021-08-19 20:21:51.8419 Trace Initializing SimpleLayout=Layout Renderer: ${level}
+2021-08-19 20:21:51.8419 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:21:51.8419 Trace Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-08-19 20:21:51.8419 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:21:51.8419 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 20:21:51.8419 Trace Initializing Layout Renderer: ${uppercase}
+2021-08-19 20:21:51.8419 Trace Initializing Layout Renderer: ${literal}
+2021-08-19 20:21:51.8419 Trace Initializing Layout Renderer: ${longdate}
+2021-08-19 20:21:51.8419 Trace Initializing '${longdate} ${level:uppercase=true} ${message}'
+2021-08-19 20:21:51.8419 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:21:51.8419 Trace Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-08-19 20:21:51.8419 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:21:51.8419 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-08-19 20:21:51.8419 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:21:51.8419 Trace  Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-08-19 20:21:51.8419 Trace   Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-08-19 20:21:51.8419 Trace   Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-08-19 20:21:51.8419 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:21:51.8419 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 20:21:51.8419 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:21:51.8419 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-08-19 20:21:51.8419 Trace Initializing Layout Renderer: ${literal}
+2021-08-19 20:21:51.8419 Trace Initializing Layout Renderer: ${shortdate}
+2021-08-19 20:21:51.8419 Trace Initializing Layout Renderer: ${literal}
+2021-08-19 20:21:51.8419 Trace Initializing 'd:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt'
+2021-08-19 20:21:51.8419 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:21:51.8419 Trace Scanning SimpleLayout ''d:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt''
+2021-08-19 20:21:51.8419 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:21:51.8419 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:21:51.8419 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-08-19 20:21:51.8419 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:21:51.8419 Trace Initializing File Target[logfile]
+2021-08-19 20:21:51.8550 Trace FindReachableObject<NLog.Layouts.Layout>:
+2021-08-19 20:21:51.8550 Trace Scanning FileTarget 'File Target[logfile]'
+2021-08-19 20:21:51.8550 Trace  Scanning Property FileName ''d:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt'' NLog.Layouts
+2021-08-19 20:21:51.8550 Trace  Scanning SimpleLayout ''d:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt''
+2021-08-19 20:21:51.8550 Trace  Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2021-08-19 20:21:51.8550 Trace  Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-08-19 20:21:51.8550 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2021-08-19 20:21:51.8550 Trace File Target[logfile] has 2 layouts
+2021-08-19 20:21:51.8550 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.RetryingMultiProcessFileAppender+Factory
+2021-08-19 20:22:58.2523 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2021-08-19 20:22:58.3027 Debug Found assembly location directory: 'D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2021-08-19 20:22:58.3027 Debug Auto loading based on NLog-Assembly found location: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0
+2021-08-19 20:22:58.3027 Debug Search for auto loading files in location: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0
+2021-08-19 20:22:58.3098 Debug Start auto loading, location: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0
+2021-08-19 20:22:58.3098 Info Auto loading assembly file: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0\NLog.Extensions.Logging.dll
+2021-08-19 20:22:58.3098 Info Loading assembly file: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0\NLog.Extensions.Logging.dll
+2021-08-19 20:22:58.3242 Info NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 1.7.3.1580. Product version: 1.7.3+5b992558f6b1c15def05efe3168eb20d7965b82a. GlobalAssemblyCache: False
+2021-08-19 20:22:58.3242 Debug ScanAssembly('NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2021-08-19 20:22:58.3242 Info Auto loading assembly file: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0\NLog.Extensions.Logging.dll succeeded!
+2021-08-19 20:22:58.3242 Trace Assembly 'Microsoft.Extensions.Logging, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2021-08-19 20:22:58.3242 Trace Assembly 'Microsoft.Extensions.Logging.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2021-08-19 20:22:58.3242 Trace Assembly 'NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c' will be hidden in callsite stacktrace
+2021-08-19 20:22:58.3242 Debug Auto loading done
+2021-08-19 20:22:58.3242 Info Message Template Auto Format enabled
+2021-08-19 20:22:58.3242 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:22:58.3396 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-08-19 20:22:58.3396 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2021-08-19 20:22:58.3396 Trace Wrapping NLog.LayoutRenderers.LevelLayoutRenderer with NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper
+2021-08-19 20:22:58.3396 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:22:58.3396 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 20:22:58.3396 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:22:58.3396 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-08-19 20:22:58.3396 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-08-19 20:22:58.3396 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-08-19 20:22:58.3396 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:22:58.3396 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 20:22:58.3396 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:22:58.3396 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2021-08-19 20:22:58.3396 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:22:58.3396 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-08-19 20:22:58.3396 Debug Setting 'NLog.Targets.FileTarget.name' to 'logfile'
+2021-08-19 20:22:58.3396 Debug Setting 'NLog.Targets.FileTarget.fileName' to 'd:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt'
+2021-08-19 20:22:58.3396 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:22:58.3396 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-08-19 20:22:58.3396 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate} ${level:uppercase=true} ${message}'
+2021-08-19 20:22:58.3396 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:22:58.3396 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-08-19 20:22:58.3396 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2021-08-19 20:22:58.3396 Trace Wrapping NLog.LayoutRenderers.LevelLayoutRenderer with NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper
+2021-08-19 20:22:58.3396 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:22:58.3396 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 20:22:58.3396 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:22:58.3550 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-08-19 20:22:58.3550 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-08-19 20:22:58.3550 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-08-19 20:22:58.3550 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:22:58.3550 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 20:22:58.3550 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:22:58.3550 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-08-19 20:22:58.3550 Info Adding target FileTarget(Name=logfile)
+2021-08-19 20:22:58.3550 Debug Registered target logfile: NLog.Targets.FileTarget
+2021-08-19 20:22:58.3550 Trace ParseRulesElement
+2021-08-19 20:22:58.3713 Debug Watching path 'D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI' filter 'nlog.config' for changes.
+2021-08-19 20:22:58.3713 Debug --- NLog configuration dump ---
+2021-08-19 20:22:58.3713 Debug Targets:
+2021-08-19 20:22:58.3713 Debug File Target[logfile]
+2021-08-19 20:22:58.3713 Debug Rules:
+2021-08-19 20:22:58.3713 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2021-08-19 20:22:58.3713 Debug --- End of NLog configuration dump ---
+2021-08-19 20:22:58.3713 Trace FindReachableObject<System.Object>:
+2021-08-19 20:22:58.3713 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]'
+2021-08-19 20:22:58.3713 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2021-08-19 20:22:58.3713 Trace  Scanning FileTarget 'File Target[logfile]'
+2021-08-19 20:22:58.3713 Trace   Scanning Property FileName ''d:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt'' NLog.Layouts
+2021-08-19 20:22:58.3713 Trace   Scanning SimpleLayout ''d:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt''
+2021-08-19 20:22:58.3713 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:22:58.3713 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:22:58.3713 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-08-19 20:22:58.3713 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:22:58.3713 Trace   Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2021-08-19 20:22:58.3713 Trace   Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-08-19 20:22:58.3713 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:22:58.3713 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-08-19 20:22:58.3713 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:22:58.3713 Trace    Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-08-19 20:22:58.3713 Trace     Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-08-19 20:22:58.3713 Trace     Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-08-19 20:22:58.3713 Trace      Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:22:58.3713 Trace      Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 20:22:58.3713 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:22:58.3713 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-08-19 20:22:58.3713 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2021-08-19 20:22:58.3713 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2021-08-19 20:22:58.3713 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2021-08-19 20:22:58.3713 Info Validating config: TargetNames=logfile, ConfigItems=14, FilePath=D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI/nlog.config
+2021-08-19 20:22:58.3869 Debug Unused target checking is started... Rule Count: 1, Target Count: 1
+2021-08-19 20:22:58.3869 Debug Unused target checking is completed. Total Rule Count: 1, Total Target Count: 1, Unused Target Count: 0
+2021-08-19 20:22:58.3869 Trace Initializing Layout Renderer: ${message}
+2021-08-19 20:22:58.3869 Trace Initializing Layout Renderer: ${literal}
+2021-08-19 20:22:58.3869 Trace Initializing Layout Renderer: ${level}
+2021-08-19 20:22:58.3869 Trace Initializing SimpleLayout=Layout Renderer: ${level}
+2021-08-19 20:22:58.3869 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:22:58.3869 Trace Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-08-19 20:22:58.3869 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:22:58.3869 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 20:22:58.3869 Trace Initializing Layout Renderer: ${uppercase}
+2021-08-19 20:22:58.3869 Trace Initializing Layout Renderer: ${literal}
+2021-08-19 20:22:58.3869 Trace Initializing Layout Renderer: ${longdate}
+2021-08-19 20:22:58.3869 Trace Initializing '${longdate} ${level:uppercase=true} ${message}'
+2021-08-19 20:22:58.3869 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:22:58.3869 Trace Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-08-19 20:22:58.3869 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:22:58.3869 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-08-19 20:22:58.3869 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:22:58.3869 Trace  Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-08-19 20:22:58.3869 Trace   Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-08-19 20:22:58.3869 Trace   Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-08-19 20:22:58.3869 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:22:58.3869 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 20:22:58.3869 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:22:58.3869 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-08-19 20:22:58.3869 Trace Initializing Layout Renderer: ${literal}
+2021-08-19 20:22:58.3869 Trace Initializing Layout Renderer: ${shortdate}
+2021-08-19 20:22:58.3869 Trace Initializing Layout Renderer: ${literal}
+2021-08-19 20:22:58.3869 Trace Initializing 'd:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt'
+2021-08-19 20:22:58.3869 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:22:58.3869 Trace Scanning SimpleLayout ''d:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt''
+2021-08-19 20:22:58.3869 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:22:58.3869 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:22:58.3869 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-08-19 20:22:58.3869 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:22:58.3869 Trace Initializing File Target[logfile]
+2021-08-19 20:22:58.4024 Trace FindReachableObject<NLog.Layouts.Layout>:
+2021-08-19 20:22:58.4024 Trace Scanning FileTarget 'File Target[logfile]'
+2021-08-19 20:22:58.4024 Trace  Scanning Property FileName ''d:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt'' NLog.Layouts
+2021-08-19 20:22:58.4024 Trace  Scanning SimpleLayout ''d:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt''
+2021-08-19 20:22:58.4024 Trace  Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2021-08-19 20:22:58.4024 Trace  Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-08-19 20:22:58.4024 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2021-08-19 20:22:58.4024 Trace File Target[logfile] has 2 layouts
+2021-08-19 20:22:58.4024 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.RetryingMultiProcessFileAppender+Factory
+2021-08-19 20:40:26.5727 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2021-08-19 20:40:26.6299 Debug Found assembly location directory: 'D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2021-08-19 20:40:26.6299 Debug Auto loading based on NLog-Assembly found location: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0
+2021-08-19 20:40:26.6299 Debug Search for auto loading files in location: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0
+2021-08-19 20:40:26.6376 Debug Start auto loading, location: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0
+2021-08-19 20:40:26.6376 Info Auto loading assembly file: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0\NLog.Extensions.Logging.dll
+2021-08-19 20:40:26.6376 Info Loading assembly file: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0\NLog.Extensions.Logging.dll
+2021-08-19 20:40:26.6529 Info NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 1.7.3.1580. Product version: 1.7.3+5b992558f6b1c15def05efe3168eb20d7965b82a. GlobalAssemblyCache: False
+2021-08-19 20:40:26.6529 Debug ScanAssembly('NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2021-08-19 20:40:26.6529 Info Auto loading assembly file: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0\NLog.Extensions.Logging.dll succeeded!
+2021-08-19 20:40:26.6529 Trace Assembly 'Microsoft.Extensions.Logging, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2021-08-19 20:40:26.6529 Trace Assembly 'Microsoft.Extensions.Logging.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2021-08-19 20:40:26.6529 Trace Assembly 'NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c' will be hidden in callsite stacktrace
+2021-08-19 20:40:26.6529 Debug Auto loading done
+2021-08-19 20:40:26.6529 Info Message Template Auto Format enabled
+2021-08-19 20:40:26.6529 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:40:26.6676 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-08-19 20:40:26.6676 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2021-08-19 20:40:26.6676 Trace Wrapping NLog.LayoutRenderers.LevelLayoutRenderer with NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper
+2021-08-19 20:40:26.6676 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:40:26.6676 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 20:40:26.6676 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:40:26.6676 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-08-19 20:40:26.6676 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-08-19 20:40:26.6676 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-08-19 20:40:26.6676 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:40:26.6676 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 20:40:26.6676 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:40:26.6676 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2021-08-19 20:40:26.6676 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:40:26.6676 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-08-19 20:40:26.6676 Debug Setting 'NLog.Targets.FileTarget.name' to 'logfile'
+2021-08-19 20:40:26.6676 Debug Setting 'NLog.Targets.FileTarget.fileName' to 'd:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt'
+2021-08-19 20:40:26.6676 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:40:26.6676 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-08-19 20:40:26.6676 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate} ${level:uppercase=true} ${message}'
+2021-08-19 20:40:26.6676 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:40:26.6676 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-08-19 20:40:26.6676 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2021-08-19 20:40:26.6676 Trace Wrapping NLog.LayoutRenderers.LevelLayoutRenderer with NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper
+2021-08-19 20:40:26.6676 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:40:26.6676 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 20:40:26.6676 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:40:26.6833 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-08-19 20:40:26.6833 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-08-19 20:40:26.6833 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-08-19 20:40:26.6833 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:40:26.6833 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 20:40:26.6833 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:40:26.6833 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-08-19 20:40:26.6833 Info Adding target FileTarget(Name=logfile)
+2021-08-19 20:40:26.6833 Debug Registered target logfile: NLog.Targets.FileTarget
+2021-08-19 20:40:26.6833 Trace ParseRulesElement
+2021-08-19 20:40:26.6833 Debug Watching path 'D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI' filter 'nlog.config' for changes.
+2021-08-19 20:40:26.6833 Debug --- NLog configuration dump ---
+2021-08-19 20:40:26.6833 Debug Targets:
+2021-08-19 20:40:26.6833 Debug File Target[logfile]
+2021-08-19 20:40:26.6833 Debug Rules:
+2021-08-19 20:40:26.6995 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2021-08-19 20:40:26.6995 Debug --- End of NLog configuration dump ---
+2021-08-19 20:40:26.6995 Trace FindReachableObject<System.Object>:
+2021-08-19 20:40:26.6995 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]'
+2021-08-19 20:40:26.6995 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2021-08-19 20:40:26.6995 Trace  Scanning FileTarget 'File Target[logfile]'
+2021-08-19 20:40:26.6995 Trace   Scanning Property FileName ''d:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt'' NLog.Layouts
+2021-08-19 20:40:26.6995 Trace   Scanning SimpleLayout ''d:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt''
+2021-08-19 20:40:26.6995 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:40:26.6995 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:40:26.6995 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-08-19 20:40:26.6995 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:40:26.6995 Trace   Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2021-08-19 20:40:26.6995 Trace   Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-08-19 20:40:26.6995 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:40:26.6995 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-08-19 20:40:26.6995 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:40:26.6995 Trace    Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-08-19 20:40:26.6995 Trace     Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-08-19 20:40:26.6995 Trace     Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-08-19 20:40:26.6995 Trace      Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:40:26.6995 Trace      Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 20:40:26.6995 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:40:26.6995 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-08-19 20:40:26.6995 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2021-08-19 20:40:26.6995 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2021-08-19 20:40:26.6995 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2021-08-19 20:40:26.6995 Info Validating config: TargetNames=logfile, ConfigItems=14, FilePath=D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI/nlog.config
+2021-08-19 20:40:26.6995 Debug Unused target checking is started... Rule Count: 1, Target Count: 1
+2021-08-19 20:40:26.7147 Debug Unused target checking is completed. Total Rule Count: 1, Total Target Count: 1, Unused Target Count: 0
+2021-08-19 20:40:26.7147 Trace Initializing Layout Renderer: ${message}
+2021-08-19 20:40:26.7147 Trace Initializing Layout Renderer: ${literal}
+2021-08-19 20:40:26.7147 Trace Initializing Layout Renderer: ${level}
+2021-08-19 20:40:26.7147 Trace Initializing SimpleLayout=Layout Renderer: ${level}
+2021-08-19 20:40:26.7147 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:40:26.7147 Trace Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-08-19 20:40:26.7147 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:40:26.7147 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 20:40:26.7147 Trace Initializing Layout Renderer: ${uppercase}
+2021-08-19 20:40:26.7147 Trace Initializing Layout Renderer: ${literal}
+2021-08-19 20:40:26.7147 Trace Initializing Layout Renderer: ${longdate}
+2021-08-19 20:40:26.7147 Trace Initializing '${longdate} ${level:uppercase=true} ${message}'
+2021-08-19 20:40:26.7147 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:40:26.7147 Trace Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-08-19 20:40:26.7147 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:40:26.7147 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-08-19 20:40:26.7147 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:40:26.7147 Trace  Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-08-19 20:40:26.7147 Trace   Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-08-19 20:40:26.7147 Trace   Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-08-19 20:40:26.7147 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:40:26.7147 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 20:40:26.7147 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:40:26.7147 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-08-19 20:40:26.7147 Trace Initializing Layout Renderer: ${literal}
+2021-08-19 20:40:26.7147 Trace Initializing Layout Renderer: ${shortdate}
+2021-08-19 20:40:26.7147 Trace Initializing Layout Renderer: ${literal}
+2021-08-19 20:40:26.7147 Trace Initializing 'd:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt'
+2021-08-19 20:40:26.7147 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:40:26.7147 Trace Scanning SimpleLayout ''d:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt''
+2021-08-19 20:40:26.7147 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:40:26.7147 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:40:26.7147 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-08-19 20:40:26.7147 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:40:26.7147 Trace Initializing File Target[logfile]
+2021-08-19 20:40:26.7147 Trace FindReachableObject<NLog.Layouts.Layout>:
+2021-08-19 20:40:26.7300 Trace Scanning FileTarget 'File Target[logfile]'
+2021-08-19 20:40:26.7300 Trace  Scanning Property FileName ''d:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt'' NLog.Layouts
+2021-08-19 20:40:26.7300 Trace  Scanning SimpleLayout ''d:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt''
+2021-08-19 20:40:26.7300 Trace  Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2021-08-19 20:40:26.7300 Trace  Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-08-19 20:40:26.7300 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2021-08-19 20:40:26.7300 Trace File Target[logfile] has 2 layouts
+2021-08-19 20:40:26.7300 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.RetryingMultiProcessFileAppender+Factory
+2021-08-19 20:43:18.3988 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2021-08-19 20:43:18.4605 Debug Found assembly location directory: 'D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2021-08-19 20:43:18.4605 Debug Auto loading based on NLog-Assembly found location: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0
+2021-08-19 20:43:18.4605 Debug Search for auto loading files in location: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0
+2021-08-19 20:43:18.4656 Debug Start auto loading, location: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0
+2021-08-19 20:43:18.4656 Info Auto loading assembly file: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0\NLog.Extensions.Logging.dll
+2021-08-19 20:43:18.4656 Info Loading assembly file: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0\NLog.Extensions.Logging.dll
+2021-08-19 20:43:18.4656 Info NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 1.7.3.1580. Product version: 1.7.3+5b992558f6b1c15def05efe3168eb20d7965b82a. GlobalAssemblyCache: False
+2021-08-19 20:43:18.4656 Debug ScanAssembly('NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2021-08-19 20:43:18.4837 Info Auto loading assembly file: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0\NLog.Extensions.Logging.dll succeeded!
+2021-08-19 20:43:18.4837 Trace Assembly 'Microsoft.Extensions.Logging, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2021-08-19 20:43:18.4837 Trace Assembly 'Microsoft.Extensions.Logging.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2021-08-19 20:43:18.4837 Trace Assembly 'NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c' will be hidden in callsite stacktrace
+2021-08-19 20:43:18.4837 Debug Auto loading done
+2021-08-19 20:43:18.4837 Info Message Template Auto Format enabled
+2021-08-19 20:43:18.4837 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:43:18.4978 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-08-19 20:43:18.4978 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2021-08-19 20:43:18.4978 Trace Wrapping NLog.LayoutRenderers.LevelLayoutRenderer with NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper
+2021-08-19 20:43:18.4978 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:43:18.4978 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 20:43:18.4978 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:43:18.4978 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-08-19 20:43:18.4978 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-08-19 20:43:18.4978 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-08-19 20:43:18.4978 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:43:18.4978 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 20:43:18.4978 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:43:18.4978 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2021-08-19 20:43:18.4978 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:43:18.4978 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-08-19 20:43:18.5124 Debug Setting 'NLog.Targets.FileTarget.name' to 'logfile'
+2021-08-19 20:43:18.5124 Debug Setting 'NLog.Targets.FileTarget.fileName' to 'd:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt'
+2021-08-19 20:43:18.5124 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:43:18.5124 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-08-19 20:43:18.5124 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate} ${level:uppercase=true} ${message}'
+2021-08-19 20:43:18.5124 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:43:18.5124 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-08-19 20:43:18.5124 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2021-08-19 20:43:18.5124 Trace Wrapping NLog.LayoutRenderers.LevelLayoutRenderer with NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper
+2021-08-19 20:43:18.5124 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:43:18.5124 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 20:43:18.5124 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:43:18.5124 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-08-19 20:43:18.5124 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-08-19 20:43:18.5124 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-08-19 20:43:18.5124 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:43:18.5124 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 20:43:18.5124 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:43:18.5124 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-08-19 20:43:18.5124 Info Adding target FileTarget(Name=logfile)
+2021-08-19 20:43:18.5124 Debug Registered target logfile: NLog.Targets.FileTarget
+2021-08-19 20:43:18.5124 Trace ParseRulesElement
+2021-08-19 20:43:18.5304 Debug Watching path 'D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI' filter 'nlog.config' for changes.
+2021-08-19 20:43:18.5304 Debug --- NLog configuration dump ---
+2021-08-19 20:43:18.5304 Debug Targets:
+2021-08-19 20:43:18.5304 Debug File Target[logfile]
+2021-08-19 20:43:18.5304 Debug Rules:
+2021-08-19 20:43:18.5304 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2021-08-19 20:43:18.5304 Debug --- End of NLog configuration dump ---
+2021-08-19 20:43:18.5304 Trace FindReachableObject<System.Object>:
+2021-08-19 20:43:18.5304 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]'
+2021-08-19 20:43:18.5304 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2021-08-19 20:43:18.5304 Trace  Scanning FileTarget 'File Target[logfile]'
+2021-08-19 20:43:18.5304 Trace   Scanning Property FileName ''d:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt'' NLog.Layouts
+2021-08-19 20:43:18.5304 Trace   Scanning SimpleLayout ''d:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt''
+2021-08-19 20:43:18.5304 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:43:18.5304 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:43:18.5304 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-08-19 20:43:18.5304 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:43:18.5304 Trace   Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2021-08-19 20:43:18.5304 Trace   Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-08-19 20:43:18.5304 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:43:18.5304 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-08-19 20:43:18.5304 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:43:18.5304 Trace    Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-08-19 20:43:18.5304 Trace     Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-08-19 20:43:18.5304 Trace     Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-08-19 20:43:18.5304 Trace      Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:43:18.5423 Trace      Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 20:43:18.5423 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:43:18.5423 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-08-19 20:43:18.5423 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2021-08-19 20:43:18.5423 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2021-08-19 20:43:18.5423 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2021-08-19 20:43:18.5423 Info Validating config: TargetNames=logfile, ConfigItems=14, FilePath=D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI/nlog.config
+2021-08-19 20:43:18.5423 Debug Unused target checking is started... Rule Count: 1, Target Count: 1
+2021-08-19 20:43:18.5423 Debug Unused target checking is completed. Total Rule Count: 1, Total Target Count: 1, Unused Target Count: 0
+2021-08-19 20:43:18.5423 Trace Initializing Layout Renderer: ${message}
+2021-08-19 20:43:18.5423 Trace Initializing Layout Renderer: ${literal}
+2021-08-19 20:43:18.5423 Trace Initializing Layout Renderer: ${level}
+2021-08-19 20:43:18.5423 Trace Initializing SimpleLayout=Layout Renderer: ${level}
+2021-08-19 20:43:18.5423 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:43:18.5423 Trace Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-08-19 20:43:18.5423 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:43:18.5423 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 20:43:18.5423 Trace Initializing Layout Renderer: ${uppercase}
+2021-08-19 20:43:18.5423 Trace Initializing Layout Renderer: ${literal}
+2021-08-19 20:43:18.5423 Trace Initializing Layout Renderer: ${longdate}
+2021-08-19 20:43:18.5423 Trace Initializing '${longdate} ${level:uppercase=true} ${message}'
+2021-08-19 20:43:18.5423 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:43:18.5423 Trace Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-08-19 20:43:18.5423 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:43:18.5423 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-08-19 20:43:18.5423 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:43:18.5423 Trace  Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-08-19 20:43:18.5423 Trace   Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-08-19 20:43:18.5423 Trace   Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-08-19 20:43:18.5584 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:43:18.5584 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 20:43:18.5584 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:43:18.5584 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-08-19 20:43:18.5584 Trace Initializing Layout Renderer: ${literal}
+2021-08-19 20:43:18.5584 Trace Initializing Layout Renderer: ${shortdate}
+2021-08-19 20:43:18.5584 Trace Initializing Layout Renderer: ${literal}
+2021-08-19 20:43:18.5584 Trace Initializing 'd:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt'
+2021-08-19 20:43:18.5584 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:43:18.5584 Trace Scanning SimpleLayout ''d:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt''
+2021-08-19 20:43:18.5584 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:43:18.5584 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:43:18.5584 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-08-19 20:43:18.5584 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:43:18.5584 Trace Initializing File Target[logfile]
+2021-08-19 20:43:18.5584 Trace FindReachableObject<NLog.Layouts.Layout>:
+2021-08-19 20:43:18.5584 Trace Scanning FileTarget 'File Target[logfile]'
+2021-08-19 20:43:18.5584 Trace  Scanning Property FileName ''d:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt'' NLog.Layouts
+2021-08-19 20:43:18.5584 Trace  Scanning SimpleLayout ''d:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt''
+2021-08-19 20:43:18.5584 Trace  Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2021-08-19 20:43:18.5584 Trace  Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-08-19 20:43:18.5584 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2021-08-19 20:43:18.5584 Trace File Target[logfile] has 2 layouts
+2021-08-19 20:43:18.5584 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.RetryingMultiProcessFileAppender+Factory
+2021-08-19 20:44:24.0327 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2021-08-19 20:44:24.0880 Debug Found assembly location directory: 'D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2021-08-19 20:44:24.0880 Debug Auto loading based on NLog-Assembly found location: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0
+2021-08-19 20:44:24.0880 Debug Search for auto loading files in location: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0
+2021-08-19 20:44:24.0928 Debug Start auto loading, location: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0
+2021-08-19 20:44:24.0928 Info Auto loading assembly file: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0\NLog.Extensions.Logging.dll
+2021-08-19 20:44:24.0928 Info Loading assembly file: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0\NLog.Extensions.Logging.dll
+2021-08-19 20:44:24.1075 Info NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 1.7.3.1580. Product version: 1.7.3+5b992558f6b1c15def05efe3168eb20d7965b82a. GlobalAssemblyCache: False
+2021-08-19 20:44:24.1075 Debug ScanAssembly('NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2021-08-19 20:44:24.1075 Info Auto loading assembly file: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0\NLog.Extensions.Logging.dll succeeded!
+2021-08-19 20:44:24.1075 Trace Assembly 'Microsoft.Extensions.Logging, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2021-08-19 20:44:24.1075 Trace Assembly 'Microsoft.Extensions.Logging.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2021-08-19 20:44:24.1075 Trace Assembly 'NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c' will be hidden in callsite stacktrace
+2021-08-19 20:44:24.1075 Debug Auto loading done
+2021-08-19 20:44:24.1075 Info Message Template Auto Format enabled
+2021-08-19 20:44:24.1230 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:44:24.1230 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-08-19 20:44:24.1230 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2021-08-19 20:44:24.1230 Trace Wrapping NLog.LayoutRenderers.LevelLayoutRenderer with NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper
+2021-08-19 20:44:24.1230 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:44:24.1230 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 20:44:24.1230 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:44:24.1230 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-08-19 20:44:24.1230 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-08-19 20:44:24.1230 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-08-19 20:44:24.1230 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:44:24.1230 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 20:44:24.1230 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:44:24.1230 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2021-08-19 20:44:24.1230 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:44:24.1367 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-08-19 20:44:24.1367 Debug Setting 'NLog.Targets.FileTarget.name' to 'logfile'
+2021-08-19 20:44:24.1367 Debug Setting 'NLog.Targets.FileTarget.fileName' to 'd:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt'
+2021-08-19 20:44:24.1367 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:44:24.1367 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-08-19 20:44:24.1367 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate} ${level:uppercase=true} ${message}'
+2021-08-19 20:44:24.1367 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:44:24.1367 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-08-19 20:44:24.1367 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2021-08-19 20:44:24.1367 Trace Wrapping NLog.LayoutRenderers.LevelLayoutRenderer with NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper
+2021-08-19 20:44:24.1367 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:44:24.1367 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 20:44:24.1367 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:44:24.1367 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-08-19 20:44:24.1367 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-08-19 20:44:24.1367 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-08-19 20:44:24.1367 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:44:24.1367 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 20:44:24.1367 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:44:24.1367 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-08-19 20:44:24.1367 Info Adding target FileTarget(Name=logfile)
+2021-08-19 20:44:24.1367 Debug Registered target logfile: NLog.Targets.FileTarget
+2021-08-19 20:44:24.1367 Trace ParseRulesElement
+2021-08-19 20:44:24.1585 Debug Watching path 'D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI' filter 'nlog.config' for changes.
+2021-08-19 20:44:24.1585 Debug --- NLog configuration dump ---
+2021-08-19 20:44:24.1585 Debug Targets:
+2021-08-19 20:44:24.1585 Debug File Target[logfile]
+2021-08-19 20:44:24.1585 Debug Rules:
+2021-08-19 20:44:24.1585 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2021-08-19 20:44:24.1585 Debug --- End of NLog configuration dump ---
+2021-08-19 20:44:24.1585 Trace FindReachableObject<System.Object>:
+2021-08-19 20:44:24.1585 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]'
+2021-08-19 20:44:24.1585 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2021-08-19 20:44:24.1585 Trace  Scanning FileTarget 'File Target[logfile]'
+2021-08-19 20:44:24.1585 Trace   Scanning Property FileName ''d:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt'' NLog.Layouts
+2021-08-19 20:44:24.1585 Trace   Scanning SimpleLayout ''d:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt''
+2021-08-19 20:44:24.1585 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:44:24.1585 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:44:24.1676 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-08-19 20:44:24.1676 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:44:24.1676 Trace   Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2021-08-19 20:44:24.1676 Trace   Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-08-19 20:44:24.1676 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:44:24.1676 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-08-19 20:44:24.1676 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:44:24.1676 Trace    Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-08-19 20:44:24.1676 Trace     Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-08-19 20:44:24.1676 Trace     Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-08-19 20:44:24.1676 Trace      Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:44:24.1676 Trace      Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 20:44:24.1676 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:44:24.1676 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-08-19 20:44:24.1676 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2021-08-19 20:44:24.1676 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2021-08-19 20:44:24.1676 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2021-08-19 20:44:24.1676 Info Validating config: TargetNames=logfile, ConfigItems=14, FilePath=D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI/nlog.config
+2021-08-19 20:44:24.1676 Debug Unused target checking is started... Rule Count: 1, Target Count: 1
+2021-08-19 20:44:24.1676 Debug Unused target checking is completed. Total Rule Count: 1, Total Target Count: 1, Unused Target Count: 0
+2021-08-19 20:44:24.1676 Trace Initializing Layout Renderer: ${message}
+2021-08-19 20:44:24.1676 Trace Initializing Layout Renderer: ${literal}
+2021-08-19 20:44:24.1676 Trace Initializing Layout Renderer: ${level}
+2021-08-19 20:44:24.1676 Trace Initializing SimpleLayout=Layout Renderer: ${level}
+2021-08-19 20:44:24.1676 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:44:24.1832 Trace Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-08-19 20:44:24.1832 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:44:24.1832 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 20:44:24.1832 Trace Initializing Layout Renderer: ${uppercase}
+2021-08-19 20:44:24.1832 Trace Initializing Layout Renderer: ${literal}
+2021-08-19 20:44:24.1832 Trace Initializing Layout Renderer: ${longdate}
+2021-08-19 20:44:24.1832 Trace Initializing '${longdate} ${level:uppercase=true} ${message}'
+2021-08-19 20:44:24.1832 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:44:24.1832 Trace Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-08-19 20:44:24.1832 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:44:24.1832 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-08-19 20:44:24.1832 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:44:24.1832 Trace  Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-08-19 20:44:24.1832 Trace   Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-08-19 20:44:24.1832 Trace   Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-08-19 20:44:24.1832 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:44:24.1832 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 20:44:24.1832 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:44:24.1832 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-08-19 20:44:24.1832 Trace Initializing Layout Renderer: ${literal}
+2021-08-19 20:44:24.1832 Trace Initializing Layout Renderer: ${shortdate}
+2021-08-19 20:44:24.1832 Trace Initializing Layout Renderer: ${literal}
+2021-08-19 20:44:24.1832 Trace Initializing 'd:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt'
+2021-08-19 20:44:24.1832 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:44:24.1832 Trace Scanning SimpleLayout ''d:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt''
+2021-08-19 20:44:24.1832 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:44:24.1832 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:44:24.1832 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-08-19 20:44:24.1832 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:44:24.1832 Trace Initializing File Target[logfile]
+2021-08-19 20:44:24.1832 Trace FindReachableObject<NLog.Layouts.Layout>:
+2021-08-19 20:44:24.1832 Trace Scanning FileTarget 'File Target[logfile]'
+2021-08-19 20:44:24.1832 Trace  Scanning Property FileName ''d:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt'' NLog.Layouts
+2021-08-19 20:44:24.1832 Trace  Scanning SimpleLayout ''d:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt''
+2021-08-19 20:44:24.1832 Trace  Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2021-08-19 20:44:24.1832 Trace  Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-08-19 20:44:24.1832 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2021-08-19 20:44:24.1832 Trace File Target[logfile] has 2 layouts
+2021-08-19 20:44:24.1832 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.RetryingMultiProcessFileAppender+Factory
+2021-08-19 20:49:09.0875 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2021-08-19 20:49:09.1619 Debug Found assembly location directory: 'D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2021-08-19 20:49:09.1619 Debug Auto loading based on NLog-Assembly found location: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0
+2021-08-19 20:49:09.1619 Debug Search for auto loading files in location: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0
+2021-08-19 20:49:09.1619 Debug Start auto loading, location: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0
+2021-08-19 20:49:09.1675 Info Auto loading assembly file: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0\NLog.Extensions.Logging.dll
+2021-08-19 20:49:09.1675 Info Loading assembly file: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0\NLog.Extensions.Logging.dll
+2021-08-19 20:49:09.1849 Info NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 1.7.3.1580. Product version: 1.7.3+5b992558f6b1c15def05efe3168eb20d7965b82a. GlobalAssemblyCache: False
+2021-08-19 20:49:09.1849 Debug ScanAssembly('NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2021-08-19 20:49:09.1849 Info Auto loading assembly file: D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI\bin\Debug\net5.0\NLog.Extensions.Logging.dll succeeded!
+2021-08-19 20:49:09.1849 Trace Assembly 'Microsoft.Extensions.Logging, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2021-08-19 20:49:09.1849 Trace Assembly 'Microsoft.Extensions.Logging.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2021-08-19 20:49:09.1849 Trace Assembly 'NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c' will be hidden in callsite stacktrace
+2021-08-19 20:49:09.1849 Debug Auto loading done
+2021-08-19 20:49:09.1849 Info Message Template Auto Format enabled
+2021-08-19 20:49:09.1994 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:49:09.1994 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-08-19 20:49:09.1994 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2021-08-19 20:49:09.1994 Trace Wrapping NLog.LayoutRenderers.LevelLayoutRenderer with NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper
+2021-08-19 20:49:09.1994 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:49:09.1994 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 20:49:09.1994 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:49:09.1994 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-08-19 20:49:09.1994 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-08-19 20:49:09.1994 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-08-19 20:49:09.1994 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:49:09.1994 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 20:49:09.1994 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:49:09.1994 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2021-08-19 20:49:09.1994 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:49:09.1994 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-08-19 20:49:09.2170 Debug Setting 'NLog.Targets.FileTarget.name' to 'logfile'
+2021-08-19 20:49:09.2170 Debug Setting 'NLog.Targets.FileTarget.fileName' to 'd:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt'
+2021-08-19 20:49:09.2170 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:49:09.2170 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-08-19 20:49:09.2170 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate} ${level:uppercase=true} ${message}'
+2021-08-19 20:49:09.2170 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:49:09.2170 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-08-19 20:49:09.2170 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2021-08-19 20:49:09.2170 Trace Wrapping NLog.LayoutRenderers.LevelLayoutRenderer with NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper
+2021-08-19 20:49:09.2170 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:49:09.2170 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 20:49:09.2170 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:49:09.2170 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-08-19 20:49:09.2170 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-08-19 20:49:09.2170 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-08-19 20:49:09.2170 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:49:09.2170 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 20:49:09.2170 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:49:09.2170 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-08-19 20:49:09.2170 Info Adding target FileTarget(Name=logfile)
+2021-08-19 20:49:09.2170 Debug Registered target logfile: NLog.Targets.FileTarget
+2021-08-19 20:49:09.2170 Trace ParseRulesElement
+2021-08-19 20:49:09.2339 Debug Watching path 'D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI' filter 'nlog.config' for changes.
+2021-08-19 20:49:09.2339 Debug --- NLog configuration dump ---
+2021-08-19 20:49:09.2339 Debug Targets:
+2021-08-19 20:49:09.2339 Debug File Target[logfile]
+2021-08-19 20:49:09.2339 Debug Rules:
+2021-08-19 20:49:09.2339 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2021-08-19 20:49:09.2339 Debug --- End of NLog configuration dump ---
+2021-08-19 20:49:09.2339 Trace FindReachableObject<System.Object>:
+2021-08-19 20:49:09.2339 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]'
+2021-08-19 20:49:09.2339 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2021-08-19 20:49:09.2339 Trace  Scanning FileTarget 'File Target[logfile]'
+2021-08-19 20:49:09.2339 Trace   Scanning Property FileName ''d:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt'' NLog.Layouts
+2021-08-19 20:49:09.2339 Trace   Scanning SimpleLayout ''d:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt''
+2021-08-19 20:49:09.2339 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:49:09.2339 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:49:09.2339 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-08-19 20:49:09.2339 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:49:09.2339 Trace   Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2021-08-19 20:49:09.2339 Trace   Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-08-19 20:49:09.2339 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:49:09.2339 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-08-19 20:49:09.2339 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:49:09.2339 Trace    Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-08-19 20:49:09.2339 Trace     Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-08-19 20:49:09.2339 Trace     Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-08-19 20:49:09.2339 Trace      Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:49:09.2339 Trace      Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 20:49:09.2339 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:49:09.2339 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-08-19 20:49:09.2339 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2021-08-19 20:49:09.2339 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2021-08-19 20:49:09.2456 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2021-08-19 20:49:09.2456 Info Validating config: TargetNames=logfile, ConfigItems=14, FilePath=D:\Projects\MistkurtPanel\backend\MistkurtAPI\MistkurtAPI/nlog.config
+2021-08-19 20:49:09.2456 Debug Unused target checking is started... Rule Count: 1, Target Count: 1
+2021-08-19 20:49:09.2456 Debug Unused target checking is completed. Total Rule Count: 1, Total Target Count: 1, Unused Target Count: 0
+2021-08-19 20:49:09.2456 Trace Initializing Layout Renderer: ${message}
+2021-08-19 20:49:09.2456 Trace Initializing Layout Renderer: ${literal}
+2021-08-19 20:49:09.2456 Trace Initializing Layout Renderer: ${level}
+2021-08-19 20:49:09.2456 Trace Initializing SimpleLayout=Layout Renderer: ${level}
+2021-08-19 20:49:09.2456 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:49:09.2456 Trace Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-08-19 20:49:09.2456 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:49:09.2456 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 20:49:09.2456 Trace Initializing Layout Renderer: ${uppercase}
+2021-08-19 20:49:09.2456 Trace Initializing Layout Renderer: ${literal}
+2021-08-19 20:49:09.2456 Trace Initializing Layout Renderer: ${longdate}
+2021-08-19 20:49:09.2456 Trace Initializing '${longdate} ${level:uppercase=true} ${message}'
+2021-08-19 20:49:09.2456 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:49:09.2456 Trace Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-08-19 20:49:09.2456 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:49:09.2456 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-08-19 20:49:09.2456 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:49:09.2456 Trace  Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-08-19 20:49:09.2456 Trace   Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-08-19 20:49:09.2456 Trace   Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-08-19 20:49:09.2456 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:49:09.2456 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-08-19 20:49:09.2456 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:49:09.2456 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-08-19 20:49:09.2456 Trace Initializing Layout Renderer: ${literal}
+2021-08-19 20:49:09.2456 Trace Initializing Layout Renderer: ${shortdate}
+2021-08-19 20:49:09.2456 Trace Initializing Layout Renderer: ${literal}
+2021-08-19 20:49:09.2612 Trace Initializing 'd:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt'
+2021-08-19 20:49:09.2612 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-08-19 20:49:09.2612 Trace Scanning SimpleLayout ''d:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt''
+2021-08-19 20:49:09.2612 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-08-19 20:49:09.2612 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:49:09.2612 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-08-19 20:49:09.2612 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-08-19 20:49:09.2612 Trace Initializing File Target[logfile]
+2021-08-19 20:49:09.2612 Trace FindReachableObject<NLog.Layouts.Layout>:
+2021-08-19 20:49:09.2612 Trace Scanning FileTarget 'File Target[logfile]'
+2021-08-19 20:49:09.2612 Trace  Scanning Property FileName ''d:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt'' NLog.Layouts
+2021-08-19 20:49:09.2612 Trace  Scanning SimpleLayout ''d:Projects\MistkurtPanel\backend\MistkurtAPI\logs\${shortdate}_logfile.txt''
+2021-08-19 20:49:09.2612 Trace  Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2021-08-19 20:49:09.2612 Trace  Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-08-19 20:49:09.2612 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2021-08-19 20:49:09.2612 Trace File Target[logfile] has 2 layouts
+2021-08-19 20:49:09.2612 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.RetryingMultiProcessFileAppender+Factory

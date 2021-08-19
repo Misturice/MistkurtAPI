@@ -121,12 +121,21 @@ namespace MistkurtAPI.Controllers
         }
 
         //GET /api/Finance/GetDailyUserData/123
-        [HttpGet("GetDailyUserData/{userId}")]
-        public IActionResult GetDailyUserData(Guid userId)
+        [HttpGet("GetDailyUserData/{userId}/{startDate}/{endDate}")]
+        public IActionResult GetDailyUserData(Guid userId, long startDate, long endDate)
         {
             Finance finance = new(_repository, _mapper, userId);
-            ExpensesDashboardDto expensesResult = finance.GetDailyData();
+            ExpensesDashboardDto expensesResult = finance.GetDailyData(startDate, endDate);
             return Ok(expensesResult);
+        }
+
+        //GET /api/Finance/GetExpenseDetails/123/321
+        [HttpGet("GetExpenseDetails/{expenseId}")]
+        public IActionResult GetExpenseDetails(Guid expenseId)
+        {
+            Finance finance = new(_repository, _mapper);
+            ExpenseDetailsDto expenseResult = finance.GetExpenseDetails(expenseId);
+            return Ok(expenseResult);
         }
 
         //GET: /api/Finance/GetRangeUserData/123/123/132

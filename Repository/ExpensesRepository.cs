@@ -41,6 +41,13 @@ namespace Repository
             return FindByKey(id);
         }
 
+        public Expenses GetExpenseWithDetailsById(Guid id)
+        {
+            return FindByCondition(elem => elem.Id == id)
+                   .Include(elem => elem.Products)
+                   .FirstOrDefault();
+        }
+
         public IEnumerable<Expenses> GetUserExpensesWithDetails(Guid id)
         {
             return FindByCondition(elem => elem.UserId.Equals(id))

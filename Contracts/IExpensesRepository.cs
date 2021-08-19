@@ -14,6 +14,7 @@ namespace Contracts
         IEnumerable<Expenses> GetUserExpensesByRange(Guid id, long startDate, long endDate);
         IEnumerable<Expenses> GetUserExpensesByRangeWithDetails(Guid id, long startDate, long endDate);
         Expenses GetExpenseById(Guid id);
+        Expenses GetExpenseWithDetailsById(Guid expenseId);
         Expenses GetUserExpenseByDate(Guid userId, long date);
         Expenses GetUserExpenseByDateWithDetails(Guid userId, long date);
 

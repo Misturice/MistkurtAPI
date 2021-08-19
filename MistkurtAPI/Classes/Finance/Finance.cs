@@ -17,34 +17,47 @@ namespace MistkurtAPI
         private readonly Guid _userId;
         private readonly IMapper _mapper;
 
-        public Finance(IRepositoryWrapper repositiory, IMapper mapper, Guid userId)
+        public Finance(IRepositoryWrapper repositiory, IMapper mapper, Guid userId = default)
         {
             _repository = repositiory;
-            _userId = userId;
+            if(userId != Guid.Empty)
+                _userId = userId;
             _mapper = mapper;
         }
 
 
         #region Public
-        public ExpensesDashboardDto GetDailyData()
+        public ExpensesDashboardDto GetDailyData(long startDate, long endDate)
         {
-            IEnumerable < Expenses > expenses = GetExpensesForCurrentMonth();
+            IEnumerable < Expenses > expenses = GetExpensesDailyByDate(startDate, endDate);
             ExpensesDashboardDto expensesResult = new();
             expensesResult.Expenses = _mapper.Map<ExpensesDto[]>(expenses);
-
             IEnumerable<Product> all_products = GetProductsFromExpenses(expenses);
-
-            return ParseExpensesReport(all_products, expensesResult, expenses);
+            (expensesResult.HighestType, expensesResult.LowestType, expensesResult.HighestTag, expensesResult.LowestTag) = GetProductsReport(all_products);
+            expensesResult.Total = expenses.Select(elem => elem.Total).Sum();
+            return expensesResult;
         }
+
+        public ExpenseDetailsDto GetExpenseDetails(Guid expenseId)
+        {
+            Expenses expense = _repository.Expenses.GetExpenseWithDetailsById(expenseId);
+            ExpenseDetailsDto expensesResult = new();
+            expensesResult.Expense = _mapper.Map<ExpensesDto>(expense);
+            expensesResult.Products = _mapper.Map<ProductDto[]>(expense.Products);
+            IEnumerable<Product> all_products = expense.Products;
+            (expensesResult.HighestType, expensesResult.LowestType, expensesResult.HighestTag, expensesResult.LowestTag) = GetProductsReport(all_products);
+            return expensesResult;
+        }
+
+
 
         #endregion
 
         #region Private
-        private IEnumerable<Expenses> GetExpensesForCurrentMonth()
+
+        private IEnumerable<Expenses> GetExpensesDailyByDate(long startDate, long endDate)
         {
-            long startOfMonth = Time.GetStartOfMonthTimestamp();
-            long today = Time.GetTodayTimestamp();
-            return _repository.Expenses.GetUserExpensesByRangeWithDetails(_userId, startOfMonth, today);
+            return _repository.Expenses.GetUserExpensesByRangeWithDetails(_userId, startDate, endDate);
         }
 
         private IEnumerable<Product> GetProductsFromExpenses(IEnumerable<Expenses> expenses)
@@ -52,16 +65,9 @@ namespace MistkurtAPI
             return expenses.SelectMany(elem => elem.Products);
         }
 
-        private ExpensesDashboardDto ParseExpensesReport(IEnumerable<Product> products, ExpensesDashboardDto expensesResult, IEnumerable<Expenses> expenses)
+        private (ProductTotals, ProductTotals, ProductTotals, ProductTotals) GetProductsReport(IEnumerable<Product> products)
         {
-            expensesResult.HighestType = GetHighestProductType(products);
-            expensesResult.LowestType = GetLowestProductType(products);
-            expensesResult.HighestTag = GetHighestProductTag(products);
-            expensesResult.LowestTag = GetLowestProductTag(products);
-
-            expensesResult.Total = expenses.Select(i => i.Total).Max();
-
-            return expensesResult;
+            return (GetHighestProductType(products), GetLowestProductType(products), GetHighestProductTag(products), GetLowestProductTag(products));
         }
 
         private ProductTotals GetHighestProductType(IEnumerable<Product> products)
