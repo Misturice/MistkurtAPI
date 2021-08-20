@@ -125,7 +125,7 @@ namespace MistkurtAPI.Controllers
         public IActionResult GetDailyUserData(Guid userId, long startDate, long endDate)
         {
             Finance finance = new(_repository, _mapper, userId);
-            ExpensesDashboardDto expensesResult = finance.GetDailyData(startDate, endDate);
+            ExpensesSummaryDto expensesResult = finance.GetDailyData(startDate, endDate);
             return Ok(expensesResult);
         }
 
@@ -134,7 +134,7 @@ namespace MistkurtAPI.Controllers
         public IActionResult GetExpenseDetails(Guid expenseId)
         {
             Finance finance = new(_repository, _mapper);
-            ExpenseDetailsDto expenseResult = finance.GetExpenseDetails(expenseId);
+            ExpensesSummaryDto expenseResult = finance.GetExpenseDetails(expenseId);
             return Ok(expenseResult);
         }
 

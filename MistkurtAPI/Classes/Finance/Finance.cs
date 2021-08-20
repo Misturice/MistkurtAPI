@@ -27,25 +27,39 @@ namespace MistkurtAPI
 
 
         #region Public
-        public ExpensesDashboardDto GetDailyData(long startDate, long endDate)
+        public ExpensesSummaryDto GetDailyData(long startDate, long endDate)
         {
             IEnumerable < Expenses > expenses = GetExpensesDailyByDate(startDate, endDate);
-            ExpensesDashboardDto expensesResult = new();
+
+            ExpensesSummaryDto expensesResult = new();
+
             expensesResult.Expenses = _mapper.Map<ExpensesDto[]>(expenses);
+
             IEnumerable<Product> all_products = GetProductsFromExpenses(expenses);
+
             (expensesResult.HighestType, expensesResult.LowestType, expensesResult.HighestTag, expensesResult.LowestTag) = GetProductsReport(all_products);
+            
             expensesResult.Total = expenses.Select(elem => elem.Total).Sum();
+
             return expensesResult;
         }
 
-        public ExpenseDetailsDto GetExpenseDetails(Guid expenseId)
+        public ExpensesSummaryDto GetExpenseDetails(Guid expenseId)
         {
             Expenses expense = _repository.Expenses.GetExpenseWithDetailsById(expenseId);
-            ExpenseDetailsDto expensesResult = new();
-            expensesResult.Expense = _mapper.Map<ExpensesDto>(expense);
-            expensesResult.Products = _mapper.Map<ProductDto[]>(expense.Products);
+
+            ExpensesSummaryDto expensesResult = new();
+
+            expensesResult.ExpenseDetails = _mapper.Map<ExpensesDto>(expense);
+
+            //expensesResult.Products = _mapper.Map<ProductDto[]>(expense.Products);
+
             IEnumerable<Product> all_products = expense.Products;
+
+            expensesResult.Total = expense.Total;
+
             (expensesResult.HighestType, expensesResult.LowestType, expensesResult.HighestTag, expensesResult.LowestTag) = GetProductsReport(all_products);
+            
             return expensesResult;
         }
 
